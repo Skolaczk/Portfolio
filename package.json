@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "portfolio",
+  "author": "Skolaczk",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
+    "gatsby": "^4.20.0",
+    "gatsby-plugin-image": "^2.20.0",
+    "gatsby-plugin-manifest": "^4.20.0",
+    "gatsby-plugin-sharp": "^4.20.0",
+    "gatsby-plugin-sitemap": "^5.20.0",
+    "gatsby-plugin-styled-components": "^5.20.0",
+    "gatsby-source-contentful": "^7.18.0",
+    "gatsby-source-filesystem": "^4.20.0",
+    "gatsby-transformer-sharp": "^4.20.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "styled-components": "^5.3.5"
+  }
+}

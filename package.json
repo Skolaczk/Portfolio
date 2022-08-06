@@ -17,8 +17,12 @@
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.20.0",
+    "gatsby-plugin-eslint": "^4.0.2",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.20.0",
     "gatsby-plugin-manifest": "^4.20.0",
+    "gatsby-plugin-react-helmet": "^5.20.0",
+    "gatsby-plugin-root-import": "^2.0.8",
     "gatsby-plugin-sharp": "^4.20.0",
     "gatsby-plugin-sitemap": "^5.20.0",
     "gatsby-plugin-styled-components": "^5.20.0",
@@ -27,6 +31,14 @@
     "gatsby-transformer-sharp": "^4.20.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
     "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-webpack-plugin": "^2.7.0"
   }
 }

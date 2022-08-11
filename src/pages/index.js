@@ -1,10 +1,17 @@
 import * as React from 'react';
+import AboutMe from '../templates/AboutMe/AboutMe';
+import Contact from '../templates/Contact/Contact';
+import Hero from '../templates/Hero/Hero';
+import Projects from '../templates/Projects/Projects';
 
 const Homepage = () => {
   return (
-    <div>
-      <h1>helloo</h1>
-    </div>
+    <>
+      <Hero />
+      <AboutMe />
+      <Projects />
+      <Contact />
+    </>
   );
 };
 

@@ -17,6 +17,14 @@ export const Header = styled.header`
     color: ${({ theme }) => theme.color.blue};
     font-size: ${({ theme }) => theme.font.size.xl};
   }
+
+  ${({ theme }) => theme.mq.tablet} {
+    padding: 20px 30px;
+  }
+
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 20px 50px;
+  }
 `;
 
 export const StyledNavigation = styled.nav`
@@ -31,6 +39,7 @@ export const StyledNavigation = styled.nav`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 1;
 
   ul {
     list-style: none;
@@ -52,6 +61,36 @@ export const StyledNavigation = styled.nav`
       outline-color: #38bdf8;
     }
   }
+
+  ${({ theme }) => theme.mq.tablet} {
+    display: block;
+    position: static;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+
+    ul {
+      display: flex;
+      margin: 0;
+    }
+
+    li {
+      margin: 0 10px 0 0;
+      text-transform: none;
+    }
+
+    button {
+      margin-left: 10px;
+    }
+  }
+
+  ${({ theme }) => theme.mq.desktop} {
+    li {
+      margin: 0 15px 0 0;
+    }
+  }
 `;
 
 export const BurgerButton = styled.button`
@@ -66,7 +105,7 @@ export const BurgerButton = styled.button`
   padding: 5px;
   position: relative;
   right: -5px;
-  z-index: 1;
+  z-index: 2;
   border-radius: 5px;
 
   div {
@@ -91,5 +130,9 @@ export const BurgerButton = styled.button`
     outline-style: solid;
     outline-color: ${({ theme }) => theme.color.blue};
     outline-width: 1px;
+  }
+
+  ${({ theme }) => theme.mq.tablet} {
+    display: none;
   }
 `;

@@ -14,6 +14,19 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
     font-family: 'Source Sans Pro', sans-serif;
     overflow: ${({ isOpen }) => (isOpen ? 'hidden' : '')};
+
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0A192F;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #38BDF8;
+      border-radius: 5px;
+    }
   }
 
   a {

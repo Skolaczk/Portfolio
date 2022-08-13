@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  max-width: 500px;
+  max-width: 700px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 0 auto;
 
   div {
     width: 100%;
@@ -14,6 +15,10 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.color.lightGrey};
     font-weight: 700;
     font-size: ${({ theme }) => theme.font.size.xxs};
+
+    ${({ theme }) => theme.mq.desktop} {
+      font-size: ${({ theme }) => theme.font.size.xs};
+    }
   }
 
   input,
@@ -23,7 +28,7 @@ export const Form = styled.form`
     border: none;
     border-radius: 5px;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     resize: none;
     color: ${({ theme }) => theme.color.lightGrey};
     margin: 10px 0 15px;
@@ -32,6 +37,14 @@ export const Form = styled.form`
       outline-style: solid;
       outline-color: ${({ theme }) => theme.color.blue};
     }
+
+    ${({ theme }) => theme.mq.desktop} {
+      margin: 15px 0 20px;
+    }
+  }
+
+  textarea {
+    height: 350px;
   }
 
   button {

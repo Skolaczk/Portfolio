@@ -43,7 +43,7 @@ const Navigation = () => {
           </li>
         </ul>
         <a href='https://github.com/Skolaczk'>
-          <Button type='button'>Check out my Github!</Button>
+          <Button isSmall type='button'>Github</Button>
         </a>
       </StyledNavigation>
     </Header>

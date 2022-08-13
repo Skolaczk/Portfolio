@@ -2,11 +2,15 @@ import styled from 'styled-components';
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.color.lightGrey};
-  font-size: 3rem;
+  font-size: ${({ theme }) => theme.font.size.l};
   text-align: center;
   position: relative;
   text-transform: uppercase;
   margin: 0 0 30px;
+
+  ${({ theme }) => theme.mq.desktop} {
+    font-size: ${({ theme }) => theme.font.size.xl};
+  }
 
   &::after {
     content: '';
@@ -23,5 +27,13 @@ export const Title = styled.h2`
 export const Subtitle = styled.p`
   color: ${({ theme }) => theme.color.grey};
   text-align: center;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.font.size.xss};
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+  ${({ theme }) => theme.mq.desktop} {
+    font-size: ${({ theme }) => theme.font.size.xs};
+  }
 `;

@@ -14,7 +14,7 @@ export const StyledFooter = styled.footer`
     transform: translateX(-50%);
     top: 0;
     width: 90%;
-    height: 2px;
+    height: 1px;
     background-color: ${({ theme }) => theme.color.blue};
   }
 
@@ -25,5 +25,11 @@ export const StyledFooter = styled.footer`
 
   p {
     margin: 0;
+  }
+
+  ${({ theme }) => theme.mq.desktop} {
+    &::after {
+      width: 95%;
+    }
   }
 `;

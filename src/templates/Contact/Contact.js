@@ -6,7 +6,7 @@ import { Form } from './Contact.styles';
 
 const Contact = () => {
   return (
-    <SectionWrapper id='#contact' isDirtyBlue>
+    <SectionWrapper id='contact' isDirtyBlue>
       <Heading
         title='Contact'
         subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum alias
@@ -36,8 +36,6 @@ const Contact = () => {
           <textarea
             name='message'
             id='message'
-            cols='30'
-            rows='10'
             placeholder='Enter your message'
           />
         </div>

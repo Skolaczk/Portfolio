@@ -8,7 +8,7 @@ import Image from './image.jpg';
 
 const Projects = () => {
   return (
-    <SectionWrapper id='#projects'>
+    <SectionWrapper id='projects'>
       <Heading
         title='Projects'
         subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum alias
@@ -16,64 +16,73 @@ const Projects = () => {
       />
       <div>
         <ProjectBox imageSource={Image}>
-          <h3>Notes-app</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus qui
-            maxime alias suscipit neque nobis blanditiis similique, voluptatem
-            quisquam saepe fugiat laboriosam molestiae quod doloremque nihil
-            voluptas dolorem, voluptatum vitae.
-          </p>
-          <ul>
-            <li>React</li>
-            <li>Styled-components</li>
-            <li>Redux</li>
-          </ul>
-          <a href='https://github.com/Skolaczk'>
-            <GithubIcon />
-          </a>
-          <a href='https://github.com/Skolaczk'>
-            <PreviewLinkIcon />
-          </a>
+          <div>
+            <h3>Notes-app</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
+              qui maxime alias suscipit neque nobis blanditiis similique,
+              voluptatem quisquam saepe fugiat laboriosam molestiae quod
+              doloremque nihil voluptas dolorem, voluptatum vitae.
+            </p>
+            <ul>
+              <li>React</li>
+              <li>Styled-components</li>
+              <li>Redux</li>
+            </ul>
+            <a href='https://github.com/Skolaczk'>
+              <GithubIcon />
+            </a>
+            <a href='https://github.com/Skolaczk'>
+              <PreviewLinkIcon />
+            </a>
+          </div>
+          <img src={Image} alt='' />
         </ProjectBox>
         <ProjectBox imageSource={Image}>
-          <h3>Notes-app</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus qui
-            maxime alias suscipit neque nobis blanditiis similique, voluptatem
-            quisquam saepe fugiat laboriosam molestiae quod doloremque nihil
-            voluptas dolorem, voluptatum vitae.
-          </p>
-          <ul>
-            <li>React</li>
-            <li>Styled-components</li>
-            <li>Redux</li>
-          </ul>
-          <a href='https://github.com/Skolaczk'>
-            <GithubIcon />
-          </a>
-          <a href='https://github.com/Skolaczk'>
-            <PreviewLinkIcon />
-          </a>
+          <div>
+            <h3>Notes-app</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
+              qui maxime alias suscipit neque nobis blanditiis similique,
+              voluptatem quisquam saepe fugiat laboriosam molestiae quod
+              doloremque nihil voluptas dolorem, voluptatum vitae.
+            </p>
+            <ul>
+              <li>React</li>
+              <li>Styled-components</li>
+              <li>Redux</li>
+            </ul>
+            <a href='https://github.com/Skolaczk'>
+              <GithubIcon />
+            </a>
+            <a href='https://github.com/Skolaczk'>
+              <PreviewLinkIcon />
+            </a>
+          </div>
+          <img src={Image} alt='' />
         </ProjectBox>
         <ProjectBox imageSource={Image}>
-          <h3>Notes-app</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus qui
-            maxime alias suscipit neque nobis blanditiis similique, voluptatem
-            quisquam saepe fugiat laboriosam molestiae quod doloremque nihil
-            voluptas dolorem, voluptatum vitae.
-          </p>
-          <ul>
-            <li>React</li>
-            <li>Styled-components</li>
-            <li>Redux</li>
-          </ul>
-          <a href='https://github.com/Skolaczk'>
-            <GithubIcon />
-          </a>
-          <a href='https://github.com/Skolaczk'>
-            <PreviewLinkIcon />
-          </a>
+          <div>
+            <h3>Notes-app</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
+              qui maxime alias suscipit neque nobis blanditiis similique,
+              voluptatem quisquam saepe fugiat laboriosam molestiae quod
+              doloremque nihil voluptas dolorem, voluptatum vitae.
+            </p>
+            <ul>
+              <li>React</li>
+              <li>Styled-components</li>
+              <li>Redux</li>
+            </ul>
+            <a href='https://github.com/Skolaczk'>
+              <GithubIcon />
+            </a>
+            <a href='https://github.com/Skolaczk'>
+              <PreviewLinkIcon />
+            </a>
+          </div>
+          <img src={Image} alt='' />
         </ProjectBox>
       </div>
     </SectionWrapper>

@@ -7,7 +7,7 @@ const Hero = () => {
     <HeroWrapper>
       <Paragraph>Hi, my name is</Paragraph>
       <h1>Michał Skolak,</h1>
-      <h2>Front-end developer.</h2>
+      <h2>Junior front-end developer.</h2>
       <HeroContent>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
         repellat quia voluptatem nostrum illo sapiente commodi vel beatae ex id

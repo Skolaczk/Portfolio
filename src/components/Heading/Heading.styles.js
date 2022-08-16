@@ -7,6 +7,8 @@ export const Title = styled.h2`
   position: relative;
   text-transform: uppercase;
   margin: 0 0 30px;
+  z-index: 0;
+
 
   ${({ theme }) => theme.mq.desktop} {
     font-size: ${({ theme }) => theme.font.size.xl};

@@ -30,6 +30,7 @@
     "gatsby-source-contentful": "^7.18.0",
     "gatsby-source-filesystem": "^4.20.0",
     "gatsby-transformer-sharp": "^4.20.0",
+    "gsap": "^3.10.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",

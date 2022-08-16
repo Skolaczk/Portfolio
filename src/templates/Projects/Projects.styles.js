@@ -31,10 +31,15 @@ export const ProjectBox = styled.article`
   }
 
   svg {
-    fill: ${({ theme }) => theme.color.blue};
+    fill: ${({ theme }) => theme.color.grey};
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    transition: fill 0.25s ease-in-out;
+
+    &:hover {
+      fill: ${({ theme }) => theme.color.blue};
+    }
   }
 
   &:not(:last-child) {

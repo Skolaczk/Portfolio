@@ -2,6 +2,7 @@ export const theme = {
   color: {
     darkBlue: '#0A192F',
     dirtyBlue: '#112240',
+    lightBlue: 'rgba(56, 189, 248, 0.1)',
     blue: '#38BDF8',
     grey: '#8892B0',
     lightGrey: '#CCD6F6',
@@ -18,6 +19,7 @@ export const theme = {
       xxl: '4rem',
     },
   },
+  shadow: '0 10px 30px -10px rgba(2,12,27,0.7)',
   mq: {
     tablet: '@media (min-width: 768px)',
     desktop: '@media (min-width: 1024px)',

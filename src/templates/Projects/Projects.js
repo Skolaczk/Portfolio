@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper.styles';
 import Heading from '../../components/Heading/Heading';
 import { ProjectBox } from './Projects.styles';
@@ -6,7 +8,33 @@ import GithubIcon from '../../assets/icons/github.svg';
 import PreviewLinkIcon from '../../assets/icons/preview-link.svg';
 import Image from './image.jpg';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Projects = () => {
+  const wrapper = useRef(null);
+
+  useEffect(() => {
+    const wrapperElements = wrapper.current.children;
+
+    [...wrapperElements].forEach((wrapperElement) => {
+      gsap.fromTo(
+        wrapperElement,
+        { y: '-=25', opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          ease: 'easeInOut',
+          stagger: 0.5,
+          duration: 1,
+          scrollTrigger: {
+            trigger: wrapperElement,
+            start: 'top 75%',
+          },
+        },
+      );
+    });
+  }, []);
+
   return (
     <SectionWrapper id='projects'>
       <Heading
@@ -14,7 +42,7 @@ const Projects = () => {
         subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum alias
         laborum ratione dignissimos.'
       />
-      <div>
+      <div ref={wrapper}>
         <ProjectBox imageSource={Image}>
           <div>
             <h3>Notes-app</h3>

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const HeroWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.darkBlue};
   width: 100%;
-  height: calc(100vh - 85px);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 25px 40px;
+  padding: 0 25px;
 
   h1 {
     color: ${({ theme }) => theme.color.lightGrey};
@@ -21,10 +21,6 @@ export const HeroWrapper = styled.div`
     color: ${({ theme }) => theme.color.grey};
     margin: 0;
     text-align: center;
-  }
-
-  ${({ theme }) => theme.mq.tablet} {
-    height: calc(100vh - 80.25px);
   }
 `;
 

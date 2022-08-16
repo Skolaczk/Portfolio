@@ -9,9 +9,14 @@ export const Button = styled.button`
   height: 50px;
   font-weight: 700;
   font-size: ${({ theme }) => theme.font.size.xxs};
+  transition: background-color 0.25s ease-in-out;
 
   &:focus {
     background-color: ${({ theme }) => theme.color.dirtyBlue};
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.lightBlue};
   }
 
   ${({ theme }) => theme.mq.tablet} {

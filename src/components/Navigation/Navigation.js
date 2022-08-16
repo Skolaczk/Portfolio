@@ -1,20 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Header, BurgerButton, StyledNavigation } from './Navigation.styles';
 import { Button } from '../Button/Button.styles';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(window.scrollY);
+  const [isDirectionDown, setIsDirectionDown] = useState(null);
 
   const toggleNavigation = () => {
     setIsOpen((prevState) => !prevState);
   };
 
+  const handleNavigation = useCallback(() => {
+    if (scrollPosition > window.scrollY) {
+      setIsDirectionDown(false);
+    } else {
+      setIsDirectionDown(true);
+    }
+    setScrollPosition(window.scrollY);
+  }, [scrollPosition]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleNavigation);
+
+    return () => {
+      window.removeEventListener('scroll', handleNavigation);
+    };
+  }, [scrollPosition]);
+
   return (
-    <Header>
+    <Header
+      isDirectionDown={isDirectionDown}
+      isOpen={isOpen}
+      scrollPosition={scrollPosition}
+    >
       <a href='#home'>
         <h2>M</h2>
       </a>
-      <BurgerButton type='button' onClick={toggleNavigation}>
+      <BurgerButton type='button' isOpen={isOpen} onClick={toggleNavigation}>
         <div />
         <div />
         <div />
@@ -43,7 +66,9 @@ const Navigation = () => {
           </li>
         </ul>
         <a href='https://github.com/Skolaczk'>
-          <Button isSmall type='button'>Github</Button>
+          <Button isSmall type='button'>
+            Github
+          </Button>
         </a>
       </StyledNavigation>
     </Header>

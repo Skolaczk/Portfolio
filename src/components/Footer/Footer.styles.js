@@ -21,6 +21,11 @@ export const StyledFooter = styled.footer`
   a {
     color: ${({ theme }) => theme.color.grey};
     text-decoration: underline;
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: ${({ theme }) => theme.color.blue};
+    }
   }
 
   p {

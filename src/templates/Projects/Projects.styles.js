@@ -83,10 +83,6 @@ export const ProjectBox = styled.article`
       font-size: ${({ theme }) => theme.font.size.m};
     }
 
-    p {
-      font-size: ${({ theme }) => theme.font.size.s};
-    }
-
     ul {
       li {
         font-size: ${({ theme }) => theme.font.size.xs};

@@ -39,10 +39,10 @@ export const StyledNavigation = styled.nav`
   display: flex;
   position: absolute;
   top: 0;
-  left: 0;
+  right: -100%;
   width: 100%;
   height: 100vh;
-  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(-100%)' : 'translateX(0)')};
   transition: transform 0.5s ease-in-out;
   background-color: ${({ theme }) => theme.color.transparentDarkBlue};
   backdrop-filter: blur(3px);

@@ -15,7 +15,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "babel-plugin-styled-components": "^2.0.7",
+    "formik": "^2.2.9",
     "gatsby": "^4.20.0",
     "gatsby-plugin-eslint": "^4.0.2",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -34,7 +36,8 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

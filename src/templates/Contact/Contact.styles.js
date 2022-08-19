@@ -21,33 +21,46 @@ export const Form = styled.form`
     }
   }
 
-  input,
-  textarea {
-    background-color: ${({ theme }) => theme.color.darkBlue};
-    font-size: ${({ theme }) => theme.font.size.xs};
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    padding: 15px;
-    resize: none;
-    color: ${({ theme }) => theme.color.lightGrey};
-    margin: 10px 0 15px;
-
-    &:focus {
-      outline-style: solid;
-      outline-color: ${({ theme }) => theme.color.blue};
-    }
-
-    ${({ theme }) => theme.mq.desktop} {
-      margin: 15px 0 20px;
-    }
-  }
-
-  textarea {
-    height: 350px;
-  }
-
   button {
     margin: 10px 0 25px;
   }
+`;
+
+export const StyledInput = styled.input`
+  background-color: ${({ theme }) => theme.color.darkBlue};
+  font-size: ${({ theme }) => theme.font.size.xs};
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  resize: none;
+  color: ${({ theme }) => theme.color.lightGrey};
+  margin: 10px 0 15px;
+  border: ${({ isError, theme }) => (isError ? `1px solid ${theme.color.red}` : '')};
+
+  &:focus {
+    border: none;
+    outline-style: solid;
+    outline-color: ${({ theme }) => theme.color.blue};
+  }
+
+  ${({ theme }) => theme.mq.desktop} {
+    margin: 15px 0 20px;
+  }
+`;
+
+export const StyledTextarea = styled(StyledInput)`
+  height: 350px;
+`;
+
+export const StyledError = styled.p`
+  color: ${({ theme }) => theme.color.red};
+  font-size: ${({ theme }) => theme.font.size.xxs};
+  margin: -10px 0 20px;
+`;
+
+export const StyledSuccess = styled.p`
+  color: ${({ theme }) => theme.color.green};
+  text-align: center;
+  font-size: ${({ theme }) => theme.font.size.xs};
 `;

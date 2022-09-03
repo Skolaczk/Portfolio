@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Button } from '../../components/Button/Button.styles';
 import Heading from '../../components/Heading/Heading';
 import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper.styles';
 import {
@@ -11,6 +10,7 @@ import {
   StyledInput,
   StyledSuccess,
   StyledTextarea,
+  StyledButton,
 } from './Contact.styles';
 
 const Contact = () => {
@@ -47,8 +47,7 @@ const Contact = () => {
     <SectionWrapper id='contact' isDirtyBlue>
       <Heading
         title='Contact'
-        subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum alias
-        laborum ratione dignissimos.'
+        subtitle='Feel free to Contact me by submitting the form below and I will get back to you as soon as possible'
       />
       <Form onSubmit={formik.handleSubmit}>
         <div>
@@ -102,9 +101,9 @@ const Contact = () => {
             ''
           )}
         </div>
-        <Button disabled={formik.isSubmitting} type='submit'>
+        <StyledButton disabled={formik.isSubmitting} type='submit'>
           Submit
-        </Button>
+        </StyledButton>
         {formState ? <StyledSuccess>{formState}</StyledSuccess> : ''}
       </Form>
     </SectionWrapper>

@@ -11,8 +11,11 @@ const gatsbyRequiredRules = path.join(
 
 module.exports = {
   siteMetadata: {
-    title: 'portfolio',
-    siteUrl: 'https://www.yourdomain.tld',
+    title: 'Michał Skolak - Portfolio',
+    description: 'It is my portfolio page.',
+    author: 'Michał Skolak',
+    keywords: 'Michał Skolak, Portfolio, Front-end developer',
+    siteUrl: 'https://michalskolak.com',
   },
   plugins: [
     {
@@ -36,22 +39,12 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    // {
-    //   resolve: 'gatsby-plugin-manifest',
-    //   options: {
-    //     icon: 'src/images/icon.png',
-    //   },
-    // },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'images',
-    //     path: './src/images/',
-    //   },
-    //   __key: 'images',
-    // },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/icons/logo.svg',
+      },
+    },
     {
       resolve: 'gatsby-plugin-root-import',
       options: {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Title = styled.h2`
+export const Title = styled.h3`
   color: ${({ theme }) => theme.color.lightGrey};
   font-size: ${({ theme }) => theme.font.size.l};
   text-align: center;
@@ -34,6 +34,7 @@ export const Subtitle = styled.p`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+  line-height: ${({ theme }) => theme.lineHeight};
 
   ${({ theme }) => theme.mq.desktop} {
     font-size: ${({ theme }) => theme.font.size.xs};

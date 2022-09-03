@@ -21,11 +21,10 @@ export const theme = {
       xxl: '4rem',
     },
   },
+  lineHeight: '1.3',
   shadow: '0 10px 30px -10px rgba(2,12,27,0.7)',
   mq: {
     tablet: '@media (min-width: 768px)',
     desktop: '@media (min-width: 1024px)',
-    bigDesktop: '@media (min-width: 1280px)',
-    huge: '@media(min-width: 1440px)',
   },
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeroWrapper = styled.div`
+export const HeroWrapper = styled.section`
   background-color: ${({ theme }) => theme.color.darkBlue};
   width: 100%;
   height: 100vh;
@@ -22,6 +22,10 @@ export const HeroWrapper = styled.div`
     margin: 0;
     text-align: center;
   }
+
+  * {
+    opacity: 0;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -41,6 +45,7 @@ export const HeroContent = styled.p`
   max-width: 450px;
   margin: 20px auto 50px;
   text-align: center;
+  line-height: ${({ theme }) => theme.lineHeight};
 
   ${({ theme }) => theme.mq.desktop} {
     font-size: ${({ theme }) => theme.font.size.s};

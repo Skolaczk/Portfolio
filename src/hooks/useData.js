@@ -36,6 +36,15 @@ export const useData = () => {
           githubLink
         }
       }
+      site {
+        siteMetadata {
+          author
+          description
+          keywords
+          siteUrl
+          title
+        }
+      }
     }
   `);
 

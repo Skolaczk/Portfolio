@@ -26,10 +26,41 @@ export const StyledFooter = styled.footer`
     &:hover {
       color: ${({ theme }) => theme.color.blue};
     }
+
+    &:focus {
+      outline: none;
+      color: ${({ theme }) => theme.color.blue};
+    }
   }
 
   p {
     margin: 0;
+  }
+
+  svg {
+    fill: ${({ theme }) => theme.color.grey};
+    width: 18px;
+    transition: fill 0.25s ease-in-out;
+
+    &:hover {
+      fill: ${({ theme }) => theme.color.blue};
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0 0 10px;
+
+    a:focus {
+      svg {
+        fill: ${({ theme }) => theme.color.blue};
+      }
+    }
   }
 
   ${({ theme }) => theme.mq.desktop} {

@@ -20,10 +20,6 @@ export const Form = styled.form`
       font-size: ${({ theme }) => theme.font.size.xs};
     }
   }
-
-  button {
-    margin: 10px 0 25px;
-  }
 `;
 
 export const StyledInput = styled.input`
@@ -51,6 +47,10 @@ export const StyledInput = styled.input`
 
 export const StyledTextarea = styled(StyledInput)`
   height: 350px;
+
+  ${({ theme }) => theme.mq.tablet} {
+    height: 400px;
+  }
 `;
 
 export const StyledError = styled.p`
@@ -63,4 +63,22 @@ export const StyledSuccess = styled.p`
   color: ${({ theme }) => theme.color.green};
   text-align: center;
   font-size: ${({ theme }) => theme.font.size.xs};
+`;
+
+export const StyledButton = styled.button`
+  background-color: ${({ theme }) => theme.color.darkBlue};
+  color: ${({ theme }) => theme.color.blue};
+  border: 2px solid ${({ theme }) => theme.color.blue};
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: ${({ theme }) => theme.font.size.xxs};
+  transition: background-color 0.25s ease-in-out;
+  width: 225px;
+  height: 50px; 
+  margin: 10px 0 25px;
+
+  &:hover, &:focus {
+    outline: none;
+    background-color: ${({ theme }) => theme.color.lightBlue};
+  }
 `;

@@ -13,18 +13,17 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1.6rem;
     font-family: 'Source Sans Pro', sans-serif;
-    overflow: ${({ isOpen }) => (isOpen ? 'hidden' : '')};
 
     ::-webkit-scrollbar {
       width: 5px;
     }
 
     ::-webkit-scrollbar-track {
-      background: #0A192F;
+      background: ${({ theme }) => theme.color.darkBlue};
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #38BDF8;
+      background: ${({ theme }) => theme.color.blue};;
       border-radius: 5px;
     }
   }

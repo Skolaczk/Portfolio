@@ -1,20 +1,38 @@
 import styled, { css } from 'styled-components';
+import { StyledLink } from '../../components/Link/Link.styles';
 
 export const ProjectBox = styled.article`
   background-image: ${({ imageSource }) => css`url(${imageSource})`};
   background-size: cover;
+  background-position: center;
   border-radius: 5px;
   padding: 20px;
-  max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-  h3 {
+  div {
+    margin-top: auto;
+  }
+
+  a:focus {
+    outline: none;
+    
+    svg {
+      fill: ${({ theme }) => theme.color.blue};
+    }
+  }
+
+  h4 {
+    font-size: ${({ theme }) => theme.font.size.s};
     margin: 0;
     color: ${({ theme }) => theme.color.blue};
   }
 
   p {
     color: ${({ theme }) => theme.color.grey};
+    line-height: ${({ theme }) => theme.lineHeight};
   }
 
   ul {
@@ -34,52 +52,16 @@ export const ProjectBox = styled.article`
     fill: ${({ theme }) => theme.color.grey};
     width: 20px;
     height: 20px;
-    margin-right: 10px;
     transition: fill 0.25s ease-in-out;
+    margin-right: 10px;
 
     &:hover {
       fill: ${({ theme }) => theme.color.blue};
     }
   }
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
-
-  &:last-child {
-    margin-bottom: 20px;
-  }
-
-  img {
-    display: none;
-  }
-
-  ${({ theme }) => theme.mq.tablet} {
-    background-color: ${({ theme }) => theme.color.dirtyBlue};
-    background-image: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    overflow: hidden;
-
-    img {
-      display: block;
-      width: 300px;
-    }
-
-    &:nth-child(even) {
-      div {
-        order: 1;
-      }
-    }
-
-    div {
-      padding: 30px;
-    }
-  }
-
   ${({ theme }) => theme.mq.desktop} {
-    h3 {
+    h4 {
       font-size: ${({ theme }) => theme.font.size.m};
     }
 
@@ -88,5 +70,26 @@ export const ProjectBox = styled.article`
         font-size: ${({ theme }) => theme.font.size.xs};
       }
     }
+  }
+`;
+
+export const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  max-width: 1000px;
+  gap: 25px;
+  margin: 0 auto;
+
+  ${({ theme }) => theme.mq.tablet} {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px;
+  }
+`;
+
+export const StyledCenterLink = styled(StyledLink)`
+  margin: 30px auto 20px;
+
+  ${({ theme }) => theme.mq.tablet} {
+    margin: 40px auto 0;
   }
 `;

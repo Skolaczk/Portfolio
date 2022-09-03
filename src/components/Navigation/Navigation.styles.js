@@ -12,18 +12,21 @@ export const Header = styled.header`
   align-items: center;
   padding: 20px;
   transform: ${({ isDirectionDown, isOpen }) => (isDirectionDown && !isOpen ? 'translateY(-80px)' : 'translateY(0)')};
-  transition: transform 0.25s 0.1s ease-in-out;
-  box-shadow: ${({ scrollPosition, theme }) => (scrollPosition === 0 ? '' : theme.shadow)};
+  transition: transform 0.25s 0.1s ease-in-out, box-shadow 0.25s ease-in-out;
+  box-shadow: ${({ scrollPosition, theme }) => (scrollPosition !== 0 && scrollPosition !== null ? theme.shadow : '')};
   backdrop-filter: ${({ isOpen }) => (!isOpen ? 'blur(3px)' : '')};
 
-  a {
-    color: transparent;
+  svg {
+    height: 45px;
   }
 
-  h2 {
-    margin: 0;
-    color: ${({ theme }) => theme.color.blue};
-    font-size: ${({ theme }) => theme.font.size.xl};
+  a:first-child {
+    border-radius: 5px;
+  }
+
+  a:first-child:focus {
+    outline-style: solid;
+    outline-color: ${({ theme }) => theme.color.blue};
   }
 
   ${({ theme }) => theme.mq.tablet} {
@@ -59,22 +62,24 @@ export const StyledNavigation = styled.nav`
 
   li {
     text-transform: uppercase;
-    margin: 40px 0;
-    padding: 10px;
-  }
+    margin: 50px 0;
 
-  a {
+    a {
     color: ${({ theme }) => theme.color.lightGrey};
     transition: color 0.25s ease-in-out;
+    padding: 10px;
 
     &:focus {
       outline-style: solid;
-      outline-color: #38bdf8;
+      outline-width: 1px;
+      outline-color: ${({ theme }) => theme.color.blue};
+      border-radius: 2px;
     }
 
-    &:hover {
+    &:hover, &:focus {
       color: ${({ theme }) => theme.color.blue};
     }
+  }
   }
 
   ${({ theme }) => theme.mq.tablet} {
@@ -86,6 +91,7 @@ export const StyledNavigation = styled.nav`
     flex-direction: row;
     background-color: transparent;
     transform: none;
+    transition: none;
 
     ul {
       display: flex;

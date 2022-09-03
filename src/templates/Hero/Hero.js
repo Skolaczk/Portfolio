@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { Button } from 'components/Button/Button.styles';
 import gsap from 'gsap';
 import { HeroWrapper, HeroContent, Paragraph } from './Hero.styles';
+import { StyledLink } from '../../components/Link/Link.styles';
 
 const Hero = () => {
   const heroWrapper = useRef(null);
@@ -28,14 +28,11 @@ const Hero = () => {
       <h1>Michał Skolak,</h1>
       <h2>Junior front-end developer.</h2>
       <HeroContent>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-        repellat quia voluptatem nostrum illo sapiente commodi vel beatae ex id
-        corrupti facere quos laudantium dignissimos alias! Nesciunt est vel
-        quasi!
+        I&apos;m 16 years old and I&apos;ve been learning programming for almost
+        two years. I&apos;m still learning to find a job as a front-end developer
+        in the future. Programming is my passion, so I try to devote every free moment to it.
       </HeroContent>
-      <a href='#projects'>
-        <Button type='button'>Check out my Projects!</Button>
-      </a>
+      <StyledLink href='#projects'>Check out my projects!</StyledLink>
     </HeroWrapper>
   );
 };

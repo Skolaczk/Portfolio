@@ -5,7 +5,7 @@ export const SectionWrapper = styled.section`
   padding: 20px;
 
   ${({ theme }) => theme.mq.tablet} {
-    padding: 30px;
+    padding: 35px;
   }
 
   ${({ theme }) => theme.mq.desktop} {

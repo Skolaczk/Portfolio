@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Subtitle, Title } from './Heading.styles';
 
-const Heading = ({ title = '', subtitle = '' }) => {
+const Heading = ({ title, subtitle }) => {
   return (
     <>
       <Title>{title}</Title>

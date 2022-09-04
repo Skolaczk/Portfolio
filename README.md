@@ -1,54 +1,49 @@
+<h3 align="center">Portfolio</h3>
+
+## Project Overview 🎉
+It's my portfolio page made in Gatsby.js. I used this technology because gatsby is a static page generator which was perfect for this project. I organized the structure of the projects, splitting them into assets, components, hooks, templates and pages. On this page you can find information about me You can also send an email directly from the website. This functionality was done using the <a href="https://www.emailjs.com/">EmailJS</a> tool. Remember about the correct data in the form as it is validated!
+
+## Installation 💾
+Download the project to your computer and install needed packages with command:
+```sh
+npm install
+```
+Then start the project on the local server with the command:
+```sh
+npm start
+```
+and open http://localhost:8000/ to see this app.
+
+## Live 📍
+Link to the live version: https://michalskolak.netlify.app/
+
+## Tech/framework used 🔧
+
+| Tech                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| Gatsby.js                           | It's a static site generator based on react.  |
+| Styled-components               | Great library for styling components in an application. The biggest advantage of this library is writing styles in js, so we can use conditional statements and other things from javascript there. |
+| EmailJS               | It's technology for sending e-mails from the website without back-end functions. |
+| Formik, Yup               | These library help maintain and validate form. |
+| Eslint, Prettier                          | These tools help keep code clean in project. |
+
+## Screenshots 📺
+
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+    <img src="https://user-images.githubusercontent.com/76774237/188315065-7d8cfbbc-4a80-4e6b-a066-f9963357a14a.png" alt="Screenshot">
 </p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
 
-## 🚀 Quick start
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/76774237/188315072-d6029ee5-9e8d-4843-af82-79f37856c766.png" alt="Screenshot">
+</p>
 
-1.  **Create a Gatsby site.**
+## Available scripts
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+| Command                   | Description                   |
+| ------------------------- | ----------------------------- |
+| `npm run start`           | Open local server             |
+| `npm run build`           | Create optimized build        |
+| `npm run clean`           | Clean .cache folder           |
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
 
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+If you encounter a problem, write to this e-mail address: [skolakmichal1@gmail.com](mailto:skolakmichal1@gmail.com)

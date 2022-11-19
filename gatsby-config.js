@@ -6,8 +6,12 @@ const gatsbyRequiredRules = path.join(
   'gatsby',
   'dist',
   'utils',
-  'eslint-rules',
+  'eslint-rules'
 );
+
+require('dotenv').config({
+  path: '.env',
+});
 
 module.exports = {
   siteMetadata: {
@@ -31,8 +35,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        accessToken: 'MI2LL0RIPT9qZAajoI3G4ZvNXxdeMWeADrrgrTP6NiQ',
-        spaceId: '2xw6by082cwg',
+        accessToken: process.env.ACCESS_TOKEN,
+        spaceId: process.env.SPACE_ID,
       },
     },
     'gatsby-plugin-styled-components',

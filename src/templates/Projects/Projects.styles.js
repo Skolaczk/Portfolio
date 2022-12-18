@@ -18,7 +18,7 @@ export const ProjectBox = styled.article`
 
   a:focus {
     outline: none;
-    
+
     svg {
       fill: ${({ theme }) => theme.color.blue};
     }
@@ -53,10 +53,28 @@ export const ProjectBox = styled.article`
     width: 20px;
     height: 20px;
     transition: fill 0.25s ease-in-out;
-    margin-right: 10px;
+    margin-right: 12px;
 
     &:hover {
       fill: ${({ theme }) => theme.color.blue};
+    }
+  }
+
+  button {
+    display: none;
+  }
+
+  ${({ theme }) => theme.mq.tablet} {
+    button {
+      display: inline;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      outline: none;
+
+      &:focus svg {
+        fill: ${({ theme }) => theme.color.blue};
+      }
     }
   }
 

@@ -32,6 +32,8 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
+    "react-modal": "^3.16.1",
+    "react-responsive-carousel": "^3.2.23",
     "styled-components": "^5.3.5",
     "yup": "^0.32.11"
   },

@@ -6,16 +6,22 @@ import Heading from '../../components/Heading/Heading';
 import { StyledCenterLink, ProjectBox, Wrapper } from './Projects.styles';
 import GithubIcon from '../../assets/icons/github.svg';
 import PreviewLinkIcon from '../../assets/icons/preview-link.svg';
+import ImageIcon from '../../assets/icons/image.svg';
 import { useData } from '../../hooks/useData';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { useModal } from '../../hooks/useModal';
 
 gsap.registerPlugin(ScrollTrigger);
 const isBrowser = typeof window !== 'undefined';
 
 const Projects = () => {
-  const [matchMedia, setMatchMedia] = useState(isBrowser ? window.matchMedia('(min-width: 615px)').matches : null);
+  const [matchMedia, setMatchMedia] = useState(
+    isBrowser ? window.matchMedia('(min-width: 615px)').matches : null
+  );
   const { allContentfulProjects } = useData();
   const projects = allContentfulProjects.nodes;
   const wrapper = useRef(null);
+  const { openModal } = useModal();
 
   const getMediaMatches = () => {
     const { matches } = window.matchMedia('(min-width: 615px)');
@@ -47,7 +53,7 @@ const Projects = () => {
             trigger: wrapperElement,
             start: 'top 65%',
           },
-        },
+        }
       );
     } else {
       [...wrapperElement.children].forEach((wrapperChildren) => {
@@ -63,7 +69,7 @@ const Projects = () => {
               trigger: wrapperChildren,
               start: 'top 65%',
             },
-          },
+          }
         );
       });
     }
@@ -85,6 +91,7 @@ const Projects = () => {
             githubLink,
             previewLink,
             image,
+            gallery,
           }) => (
             <ProjectBox key={id} imageSource={image.url}>
               <h4>{title}</h4>
@@ -101,9 +108,16 @@ const Projects = () => {
                 <a href={previewLink} aria-label='preview'>
                   <PreviewLinkIcon />
                 </a>
+                <button
+                  type='button'
+                  aria-label='gallery'
+                  onClick={() => openModal({ title, gallery })}
+                >
+                  <ImageIcon />
+                </button>
               </div>
             </ProjectBox>
-          ),
+          )
         )}
       </Wrapper>
       <StyledCenterLink href='https://github.com/Skolaczk?tab=repositories'>

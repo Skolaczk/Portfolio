@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 export const useData = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allContentfulTechnologies(sort: {fields: icon___createdAt}) {
+      allContentfulTechnologies(sort: { fields: icon___createdAt }) {
         nodes {
           id
           name
@@ -12,7 +12,7 @@ export const useData = () => {
           }
         }
       }
-      allContentfulTools(sort: {fields: icon___createdAt}) {
+      allContentfulTools(sort: { fields: icon___createdAt }) {
         nodes {
           id
           name
@@ -34,6 +34,9 @@ export const useData = () => {
           }
           previewLink
           githubLink
+          gallery {
+            url
+          }
         }
       }
       site {

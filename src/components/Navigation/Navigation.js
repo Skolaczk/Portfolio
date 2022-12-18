@@ -2,14 +2,19 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Header, BurgerButton, StyledNavigation } from './Navigation.styles';
 import { StyledSmallLink } from '../Link/Link.styles';
 import Logo from '../../assets/icons/logo.svg';
+import { useModal } from '../../hooks/useModal';
+import { useWindow } from '../../hooks/useWindow';
 
 const isBrowser = typeof window !== 'undefined';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(isBrowser ? window.scrollY : null);
+  const { modalIsOpen } = useModal();
+  const { matchMedia } = useWindow();
+  const [scrollPosition, setScrollPosition] = useState(
+    isBrowser ? window.scrollY : null
+  );
   const [isDirectionDown, setIsDirectionDown] = useState(null);
-  const [matchMedia, setMatchMedia] = useState(isBrowser ? window.matchMedia('(min-width: 768px)').matches : null);
 
   const toggleNavigation = () => {
     setIsOpen((prevState) => !prevState);
@@ -22,6 +27,10 @@ const Navigation = () => {
       document.body.style.overflow = '';
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    if (modalIsOpen) setIsDirectionDown(true);
+  }, [modalIsOpen]);
 
   const handleNavigation = useCallback(() => {
     if (scrollPosition > window.scrollY) {
@@ -40,19 +49,9 @@ const Navigation = () => {
     };
   }, [scrollPosition]);
 
-  const getMediaMatches = () => {
-    const { matches } = window.matchMedia('(min-width: 768px)');
-    setMatchMedia(matches);
-    if (matches) setIsOpen(false);
-  };
-
   useEffect(() => {
-    window.addEventListener('resize', getMediaMatches);
-
-    return () => {
-      window.removeEventListener('resize', getMediaMatches);
-    };
-  }, []);
+    if (matchMedia) setIsOpen(false);
+  }, [matchMedia]);
 
   return (
     <Header
@@ -60,10 +59,15 @@ const Navigation = () => {
       isOpen={isOpen}
       scrollPosition={scrollPosition}
     >
-      <a href='#home' aria-label="Scroll to hero">
+      <a href='#home' aria-label='Scroll to hero'>
         <Logo />
       </a>
-      <BurgerButton type='button' aria-label='Menu button' isOpen={isOpen} onClick={toggleNavigation}>
+      <BurgerButton
+        type='button'
+        aria-label='Menu button'
+        isOpen={isOpen}
+        onClick={toggleNavigation}
+      >
         <div />
         <div />
         <div />
@@ -73,7 +77,9 @@ const Navigation = () => {
           <li>
             <a
               onClick={!matchMedia ? toggleNavigation : null}
-              tabIndex={!isOpen && !matchMedia && matchMedia !== null ? '-1' : ''}
+              tabIndex={
+                !isOpen && !matchMedia && matchMedia !== null ? '-1' : ''
+              }
               href='#home'
             >
               Home
@@ -82,7 +88,9 @@ const Navigation = () => {
           <li>
             <a
               onClick={!matchMedia ? toggleNavigation : null}
-              tabIndex={!isOpen && !matchMedia && matchMedia !== null ? '-1' : ''}
+              tabIndex={
+                !isOpen && !matchMedia && matchMedia !== null ? '-1' : ''
+              }
               href='#about-me'
             >
               About me
@@ -91,7 +99,9 @@ const Navigation = () => {
           <li>
             <a
               onClick={!matchMedia ? toggleNavigation : null}
-              tabIndex={!isOpen && !matchMedia && matchMedia !== null ? '-1' : ''}
+              tabIndex={
+                !isOpen && !matchMedia && matchMedia !== null ? '-1' : ''
+              }
               href='#projects'
             >
               Projects
@@ -100,7 +110,9 @@ const Navigation = () => {
           <li>
             <a
               onClick={!matchMedia ? toggleNavigation : null}
-              tabIndex={!isOpen && !matchMedia && matchMedia !== null ? '-1' : ''}
+              tabIndex={
+                !isOpen && !matchMedia && matchMedia !== null ? '-1' : ''
+              }
               href='#contact'
             >
               Contact

@@ -102,10 +102,14 @@ const Projects = () => {
                     <li key={tech}>{tech}</li>
                   ))}
                 </ul>
-                <a href={githubLink} aria-label='github'>
+                <a title='Github' href={githubLink} aria-label='github'>
                   <GithubIcon />
                 </a>
-                <a href={previewLink} aria-label='preview'>
+                <a
+                  title='Preview project'
+                  href={previewLink}
+                  aria-label='preview'
+                >
                   <PreviewLinkIcon />
                 </a>
                 <button
@@ -120,7 +124,10 @@ const Projects = () => {
           )
         )}
       </Wrapper>
-      <StyledCenterLink href='https://github.com/Skolaczk?tab=repositories'>
+      <StyledCenterLink
+        title='Github projects'
+        href='https://github.com/Skolaczk?tab=repositories'
+      >
         More projects
       </StyledCenterLink>
     </SectionWrapper>

@@ -46,6 +46,7 @@ export const useData = () => {
           keywords
           siteUrl
           title
+          googleSiteVerification
         }
       }
     }

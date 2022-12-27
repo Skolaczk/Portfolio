@@ -59,7 +59,7 @@ const Navigation = () => {
       isOpen={isOpen}
       scrollPosition={scrollPosition}
     >
-      <a href='#home' aria-label='Scroll to hero'>
+      <a title='home' href='#home' aria-label='Scroll to hero'>
         <Logo />
       </a>
       <BurgerButton
@@ -76,6 +76,7 @@ const Navigation = () => {
         <ul>
           <li>
             <a
+              title='Home'
               onClick={!matchMedia ? toggleNavigation : null}
               tabIndex={
                 !isOpen && !matchMedia && matchMedia !== null ? '-1' : ''
@@ -87,6 +88,7 @@ const Navigation = () => {
           </li>
           <li>
             <a
+              title='About me'
               onClick={!matchMedia ? toggleNavigation : null}
               tabIndex={
                 !isOpen && !matchMedia && matchMedia !== null ? '-1' : ''
@@ -98,6 +100,7 @@ const Navigation = () => {
           </li>
           <li>
             <a
+              title='Projects'
               onClick={!matchMedia ? toggleNavigation : null}
               tabIndex={
                 !isOpen && !matchMedia && matchMedia !== null ? '-1' : ''
@@ -109,6 +112,7 @@ const Navigation = () => {
           </li>
           <li>
             <a
+              title='Contact'
               onClick={!matchMedia ? toggleNavigation : null}
               tabIndex={
                 !isOpen && !matchMedia && matchMedia !== null ? '-1' : ''
@@ -120,6 +124,7 @@ const Navigation = () => {
           </li>
         </ul>
         <StyledSmallLink
+          title='Github'
           tabIndex={!isOpen && !matchMedia && matchMedia !== null ? '-1' : ''}
           href='https://github.com/Skolaczk'
         >

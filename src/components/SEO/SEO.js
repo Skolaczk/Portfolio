@@ -10,13 +10,20 @@ export const SEO = ({ title, description }) => {
     description: defaultDescription,
     author,
     keywords,
+    googleSiteVerification,
+    siteUrl,
   } = site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
+    type: 'website',
+    image: 'src/assets/icons/logo.svg',
+    twitterCard: 'summary_large_image',
     author,
     keywords,
+    googleSiteVerification,
+    siteUrl,
   };
 
   return (
@@ -29,6 +36,34 @@ export const SEO = ({ title, description }) => {
       <meta name='description' content={seo.description} />
       <meta name='keywords' content={seo.keywords} />
       <meta name='author' content={seo.author} />
+      <meta property='og:type' content={seo.type} />
+      <meta property='og:image' content={seo.image} />
+      <meta property='og:title' content={seo.title} />
+      <meta property='og:description' content={seo.description} />
+      <meta property='og:url' content={seo.siteUrl} />
+      <meta name='twitter:card' content={seo.twitterCard} />
+      <meta name='twitter:creator' content={seo.author} />
+      <meta name='twitter:title' content={seo.title} />
+      <meta name='twitter:description' content={seo.description} />
+      <meta
+        name='google-site-verification'
+        content={seo.googleSiteVerification}
+      />
+      <script type='application/ld+json'>
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "${seo.type}",
+          "url": "${seo.siteUrl}",
+          "name": "${seo.title}",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "skolakmichal1@gmail.com",
+            "contactType": "User Support"
+          }
+        }
+      `}
+      </script>
     </Helmet>
   );
 };

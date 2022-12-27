@@ -15,11 +15,13 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Michał Skolak - Portfolio',
-    description: 'It is my portfolio page.',
+    title: 'Michał Skolak | Front-end developer | Portfolio',
+    description:
+      'I am Michał, and it is my portfolio page. I am 16 years old and I have been learning programming for 2 years to become a front-end developer in the future',
     author: 'Michał Skolak',
-    keywords: 'Michał Skolak, Portfolio, Front-end developer',
-    siteUrl: 'https://michalskolak.com',
+    keywords: 'Michał Skolak,Front-end developer,Portfolio',
+    siteUrl: 'https://michalskolak.netlify.app/',
+    googleSiteVerification: 'LC8BEcTgSAYqz7TbnHAq6oPVAYTScpcp-oxAZf-J4Wg',
   },
   plugins: [
     {

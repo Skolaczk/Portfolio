@@ -30,14 +30,27 @@ const AboutMe = () => {
           </AboutMeContent>
           <AboutMeContent>
             Now, I&apos;m still learning and creating projects that you can see
-            in the <a href='#projects'>projects</a> section or on {' '}
-            <a href='https://github.com/Skolaczk?tab=repositories'>Github</a> to become a junior
-            front-end developer in the future.
+            in the{' '}
+            <a title='Projects' href='#projects'>
+              projects
+            </a>{' '}
+            section or on{' '}
+            <a
+              title='Github projects'
+              href='https://github.com/Skolaczk?tab=repositories'
+            >
+              Github
+            </a>{' '}
+            to become a junior front-end developer in the future.
           </AboutMeContent>
           <AboutMeContent>
             I&apos;m open to Job opportunities where I can contribute, learn and
             grow. If you have a good opportunity that matches my skills and
-            experience then don&apos;t hesitate to <a href='#contact'>contact me</a>.
+            experience then don&apos;t hesitate to{' '}
+            <a title='Contact' href='#contact'>
+              contact me
+            </a>
+            .
           </AboutMeContent>
         </div>
         <Wrapper>

@@ -10,6 +10,7 @@ const Footer = () => {
       <ul>
         <li>
           <a
+            title='Linkedin'
             href='https://www.linkedin.com/in/micha%C5%82-skolak-06905524b/'
             aria-label='linkedin'
           >
@@ -17,19 +18,29 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href='mailto: skolakmichal1@gmail.com' aria-label='email'>
+          <a
+            title='Email'
+            href='mailto: skolakmichal1@gmail.com'
+            aria-label='email'
+          >
             <EmailIcon />
           </a>
         </li>
         <li>
-          <a href='https://github.com/Skolaczk' aria-label='github'>
+          <a
+            title='Github'
+            href='https://github.com/Skolaczk'
+            aria-label='github'
+          >
             <GithubIcon />
           </a>
         </li>
       </ul>
       <p>
         © Copyright 2022. Created by{' '}
-        <a href='https://github.com/Skolaczk'>Michał Skolak</a>
+        <a title='Michał Skolak - Github' href='https://github.com/Skolaczk'>
+          Michał Skolak
+        </a>
       </p>
     </StyledFooter>
   );

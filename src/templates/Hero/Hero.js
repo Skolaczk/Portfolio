@@ -28,7 +28,7 @@ const Hero = () => {
       <h1>Michał Skolak,</h1>
       <h2>Junior front-end developer.</h2>
       <HeroContent>
-        I&apos;m 16 years old and I&apos;ve been learning programming for almost
+        I&apos;m 17 years old and I&apos;ve been learning programming for almost
         two years. I&apos;m still learning to find a job as a front-end
         developer in the future. Programming is my passion, so I try to devote
         every free moment to it.

@@ -17,7 +17,7 @@ module.exports = {
   siteMetadata: {
     title: 'Michał Skolak | Front-end developer | Portfolio',
     description:
-      'I am Michał, and it is my portfolio page. I am 16 years old and I have been learning programming for 2 years to become a front-end developer in the future',
+      'I am Michał, and it is my portfolio page. I am 17 years old and I have been learning programming for 2 years to become a front-end developer in the future',
     author: 'Michał Skolak',
     keywords: 'Michał Skolak,Front-end developer,Portfolio',
     siteUrl: 'https://michalskolak.netlify.app/',

@@ -2,14 +2,12 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Header, BurgerButton, StyledNavigation } from './Navigation.styles';
 import { StyledSmallLink } from '../Link/Link.styles';
 import Logo from '../../assets/icons/logo.svg';
-import { useModal } from '../../hooks/useModal';
 import { useWindow } from '../../hooks/useWindow';
 
 const isBrowser = typeof window !== 'undefined';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { modalIsOpen } = useModal();
   const { matchMedia } = useWindow();
   const [scrollPosition, setScrollPosition] = useState(
     isBrowser ? window.scrollY : null
@@ -27,10 +25,6 @@ const Navigation = () => {
       document.body.style.overflow = '';
     }
   }, [isOpen]);
-
-  useEffect(() => {
-    if (modalIsOpen) setIsDirectionDown(true);
-  }, [modalIsOpen]);
 
   const handleNavigation = useCallback(() => {
     if (scrollPosition > window.scrollY) {

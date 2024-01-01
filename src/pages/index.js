@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Footer from '../components/Footer/Footer';
-import GalleryModal from '../components/GalleryModal/GalleryModal';
 import Navigation from '../components/Navigation/Navigation';
 import { SEO } from '../components/SEO/SEO';
 import AboutMe from '../templates/AboutMe/AboutMe';
@@ -17,7 +16,6 @@ const Homepage = () => {
       <Projects />
       <Contact />
       <Footer />
-      <GalleryModal />
     </>
   );
 };

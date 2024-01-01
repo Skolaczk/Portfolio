@@ -34,9 +34,6 @@ export const useData = () => {
           }
           previewLink
           githubLink
-          gallery {
-            url
-          }
         }
       }
       site {

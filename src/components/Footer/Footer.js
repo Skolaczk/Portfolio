@@ -37,7 +37,7 @@ const Footer = () => {
         </li>
       </ul>
       <p>
-        © Copyright 2022. Created by{' '}
+        © Copyright {new Date().getFullYear()}. Created by{' '}
         <a title='Michał Skolak - Github' href='https://github.com/Skolaczk'>
           Michał Skolak
         </a>

@@ -48,12 +48,9 @@ export const AboutMeContent = styled.p`
 `;
 
 export const Wrapper = styled.div`
-  ${({ theme }) => theme.mq.tablet} {
+  ${({ theme }) => theme.mq.desktop} {
     display: flex;
     gap: 25px;
-  }
-
-  ${({ theme }) => theme.mq.desktop} {
     flex-direction: column;
   }
 `;

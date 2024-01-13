@@ -23,10 +23,10 @@ const AboutMe = () => {
         <div>
           <MediumTitle>Get to know me!</MediumTitle>
           <AboutMeContent>
-            My name is Michał, I&apos;m 18 years old and I&apos;m from Poland,
-            more precisely from the town of Koprzywnica. I got interested in
-            programming two years ago, when I was studying HTML at school. Later
-            I started learning other frontend technologies.
+            My name is Michał, I&apos;m from Poland, more precisely from the
+            town of Koprzywnica. I got interested in programming two years ago,
+            when I was studying HTML at school. Later I started learning other
+            frontend technologies.
           </AboutMeContent>
           <AboutMeContent>
             Now, I&apos;m still learning and creating projects that you can see

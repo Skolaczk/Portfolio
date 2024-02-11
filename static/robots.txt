@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://michalskolak.netlify.app/sitemap/sitemap-index.xml

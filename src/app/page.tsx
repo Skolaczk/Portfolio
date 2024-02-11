@@ -1,6 +1,4 @@
-import { HeroForm } from '@/components/form';
-import { Icons } from '@/components/icons';
-import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const Home = () => {
   return (
@@ -13,24 +11,7 @@ const Home = () => {
         Tailwind CSS, Next-auth, Eslint, testing tools and more. Jumpstart your
         project with efficiency and style.
       </p>
-      <div className="mt-1">
-        <HeroForm />
-      </div>
-      <div className="mt-2 flex gap-4">
-        <Button asChild>
-          <a
-            href="https://github.com/Skolaczk/next-starter/blob/main/README.md#getting-started"
-            target="_blank"
-          >
-            Get Started
-          </a>
-        </Button>
-        <Button variant="outline" asChild>
-          <a href="https://github.com/Skolaczk/next-starter" target="_blank">
-            <Icons.github className="mr-2 size-4" /> Github
-          </a>
-        </Button>
-      </div>
+      <ThemeToggle />
     </section>
   );
 };

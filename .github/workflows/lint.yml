@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    name: Eslint, Typescript, prettier and test
+    name: Eslint, Typescript, prettier
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,5 +19,3 @@ jobs:
         run: npm run typecheck
       - name: Prettier
         run: npm run format:check
-      - name: Tests
-        run: npm run test

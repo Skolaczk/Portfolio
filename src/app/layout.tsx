@@ -3,10 +3,7 @@ import '@/styles/globals.css';
 import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
-import { Footer } from '@/components/footer';
-import { Navbar } from '@/components/navbar/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/toaster';
 import { siteConfig } from '@/lib/constant';
 import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
@@ -49,12 +46,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans', fonts)}>
-        <ThemeProvider attribute="class">
-          <Navbar />
-          {children}
-          <Footer />
-          <Toaster />
-        </ThemeProvider>
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
       </body>
     </html>
   );

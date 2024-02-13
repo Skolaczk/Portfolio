@@ -10,7 +10,7 @@ export const Intro = () => {
         🎉
         <span className="ml-3">Check out my new project</span>
       </a>
-      <h1 className="text-4xl font-bold leading-tight tracking-tighter sm:text-5xl">
+      <h1 className="text-3xl font-bold leading-tight tracking-tighter sm:text-4xl">
         Software developer with a passion for design
       </h1>
       <p className="text-muted-foreground max-w-2xl">

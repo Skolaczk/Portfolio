@@ -4,8 +4,8 @@ import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
 import { ThemeProvider } from '@/components/theme-provider';
-import { siteConfig } from '@/lib/constant';
 import { fonts } from '@/lib/fonts';
+import { siteConfig } from '@/lib/site-config';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {

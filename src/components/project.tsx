@@ -2,14 +2,9 @@ import Image from 'next/image';
 
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
+import { projectsData } from '@/lib/data';
 
-type TProject = {
-  image: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  links: { preview: string; github: string };
-};
+type TProject = (typeof projectsData)[number];
 
 export const Project = (project: TProject) => {
   const { image, title, description, technologies, links } = project;

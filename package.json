@@ -38,6 +38,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.50.0",
+    "react-vertical-timeline-component": "^3.6.0",
     "tailwind-merge": "^2.2.1",
     "zod": "^3.22.4"
   },
@@ -47,6 +48,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "autoprefixer": "^10.0.1",

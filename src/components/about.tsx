@@ -4,7 +4,7 @@ import { SectionHeading } from '@/components/section-heading';
 export const About = () => {
   return (
     <section className="my-8 flex w-full flex-col items-center sm:my-10">
-      <SectionHeading heading="About me" />
+      <SectionHeading heading="About Me" />
       <div className="max-w-2xl text-center leading-7">
         <p className="mb-4">
           After graduating with a degree in Accounting, I decided to pursue my

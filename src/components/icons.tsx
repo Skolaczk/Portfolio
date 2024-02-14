@@ -1,10 +1,20 @@
-import { ArrowRight, Download, LucideProps, Moon, Sun } from 'lucide-react';
+import {
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Github,
+  LucideProps,
+  Moon,
+  Sun,
+} from 'lucide-react';
 
 export const Icons = {
   sun: Sun,
   moon: Moon,
   arrowRight: ArrowRight,
   download: Download,
+  preview: ExternalLink,
+  githubOutline: Github,
   github: (props: LucideProps) => (
     <svg viewBox="0 0 24 24" {...props}>
       <path

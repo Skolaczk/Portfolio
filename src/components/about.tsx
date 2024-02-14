@@ -3,9 +3,9 @@ import { SectionHeading } from '@/components/section-heading';
 
 export const About = () => {
   return (
-    <section className="my-10 flex w-full flex-col items-center">
+    <section className="my-8 flex w-full flex-col items-center sm:my-10">
       <SectionHeading heading="About me" />
-      <div className="max-w-2xl text-center text-sm leading-7">
+      <div className="max-w-2xl text-center leading-7">
         <p className="mb-4">
           After graduating with a degree in Accounting, I decided to pursue my
           passion for programming. I enrolled in a coding bootcamp and learned
@@ -23,7 +23,7 @@ export const About = () => {
           how to play the guitar.
         </p>
       </div>
-      <div className="mt-5 flex w-full flex-wrap justify-center gap-10">
+      <div className="mt-8 flex w-full flex-wrap justify-center gap-10">
         <Icons.html className="size-12" />
         <Icons.css className="size-12" />
         <Icons.sass className="size-12" />

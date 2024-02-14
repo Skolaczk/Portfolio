@@ -5,7 +5,7 @@ import { Icons } from '@/components/icons';
 
 export const Intro = () => {
   return (
-    <section className="my-10 flex flex-col items-center gap-4 text-center">
+    <section className="my-8 flex flex-col items-center gap-4 text-center sm:my-10">
       <a href="#" className="bg-muted rounded px-3 py-1 text-sm font-medium">
         🎉
         <span className="ml-3">Check out my new project</span>

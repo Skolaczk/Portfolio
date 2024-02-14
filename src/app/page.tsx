@@ -1,6 +1,7 @@
 import { About } from '@/components/about';
 import { Contact } from '@/components/contact';
 import { Experience } from '@/components/experience';
+import { Footer } from '@/components/footer';
 import { Intro } from '@/components/intro';
 import { Projects } from '@/components/projects';
 import { ThemeToggle } from '@/components/theme-toggle';
@@ -15,6 +16,7 @@ const Home = () => {
         <Projects />
         <Experience />
         <Contact />
+        <Footer />
       </div>
       <div className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8">
         <ThemeToggle />

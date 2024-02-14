@@ -7,7 +7,7 @@ export const Contact = () => {
     <section className="my-8 w-full sm:my-10">
       <SectionHeading
         heading="Get In Touch"
-        content="Please contact me directly at skolakmichal1@gmail.com or through this form"
+        content="Please contact me directly at skolakmichal1@gmail.com or through this form."
       />
       <form className="flex flex-col items-center gap-5">
         <input

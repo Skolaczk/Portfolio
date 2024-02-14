@@ -16,6 +16,7 @@ export const Icons = {
   download: Download,
   preview: ExternalLink,
   githubOutline: Github,
+  briefcase: Briefcase,
   github: (props: LucideProps) => (
     <svg viewBox="0 0 24 24" {...props}>
       <path
@@ -32,7 +33,6 @@ export const Icons = {
       />
     </svg>
   ),
-  briefcase: Briefcase,
   html: (props: LucideProps) => (
     <svg viewBox="0 0 50 50" {...props}>
       <path

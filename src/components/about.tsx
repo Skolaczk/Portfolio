@@ -3,7 +3,10 @@ import { SectionHeading } from '@/components/section-heading';
 
 export const About = () => {
   return (
-    <section className="my-8 flex w-full flex-col items-center sm:my-10">
+    <section
+      id="about"
+      className="my-8 flex w-full scroll-mt-28 flex-col items-center sm:my-10"
+    >
       <SectionHeading heading="About Me" />
       <div className="max-w-2xl text-center leading-7">
         <p className="mb-4">

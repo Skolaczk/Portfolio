@@ -4,7 +4,7 @@ import { projectsData } from '@/lib/data';
 
 export const Projects = () => {
   return (
-    <section className="my-8 sm:my-10">
+    <section id="projects" className="my-8 scroll-mt-28 sm:my-10">
       <SectionHeading
         heading="My Projects"
         content="Projects I worked on. Due to nature of internet businesses not all of them are still online."

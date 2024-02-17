@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   Briefcase,
+  ChevronDown,
   Download,
   ExternalLink,
   Github,
@@ -17,6 +18,7 @@ export const Icons = {
   preview: ExternalLink,
   githubOutline: Github,
   briefcase: Briefcase,
+  chevronDown: ChevronDown,
   github: (props: LucideProps) => (
     <svg viewBox="0 0 24 24" {...props}>
       <path

@@ -34,7 +34,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="my-8 w-full sm:my-10">
+    <section id="contact" className="my-8 w-full scroll-mt-28 sm:my-10">
       <SectionHeading
         heading="Get In Touch"
         content="Please contact me directly at skolakmichal1@gmail.com or through this form."

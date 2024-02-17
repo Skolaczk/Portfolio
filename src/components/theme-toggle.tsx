@@ -2,14 +2,15 @@
 
 import { useTheme } from 'next-themes';
 
-import { Button } from '@/components/button';
+import { Button, ButtonProps } from '@/components/button';
 import { Icons } from '@/components/icons';
 
-export const ThemeToggle = () => {
+export const ThemeToggle = ({ className }: ButtonProps) => {
   const { theme, setTheme } = useTheme();
 
   return (
     <Button
+      className={className}
       variant="secondary"
       size="icon"
       aria-label="theme toggle"

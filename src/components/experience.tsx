@@ -14,7 +14,7 @@ import { experiencesData } from '@/lib/data';
 
 export const Experience = () => {
   return (
-    <section className="my-8 sm:my-10">
+    <section id="experience" className="my-8 scroll-mt-28 sm:my-10">
       <SectionHeading
         heading="My Experience"
         content="Projects I worked on. Due to nature of internet businesses not all of them are still online."

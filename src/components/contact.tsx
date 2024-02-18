@@ -2,6 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { toast } from 'sonner';
 import { z } from 'zod';
 
 import { sendEmail } from '@/actions/send-email';
@@ -29,10 +30,14 @@ export const Contact = () => {
   } = useForm<TFormSchema>({ resolver: zodResolver(formSchema) });
 
   const onSubmit = async (values: TFormSchema) => {
-    const { error } = await sendEmail(values);
+    const { data, error } = await sendEmail(values);
 
-    console.log(error);
+    if (error) {
+      toast.error(error);
+      return;
+    }
 
+    toast.success(data);
     reset();
   };
 

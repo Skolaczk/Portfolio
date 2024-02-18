@@ -16,6 +16,6 @@ export const siteConfig = {
     'Next-auth',
     'Prisma',
   ],
-  url: env.NEXT_PUBLIC_SITE_URL || 'https://example.com',
-  googleSiteVerificationId: env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION_ID || '',
+  url: env.SITE_URL || 'https://example.com',
+  googleSiteVerificationId: env.GOOGLE_SITE_VERIFICATION_ID || '',
 };

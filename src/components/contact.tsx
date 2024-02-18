@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
+import { sendEmail } from '@/actions/send-email';
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
@@ -17,7 +18,7 @@ const formSchema = z.object({
   message: z.string().min(1, { message: 'Message is required' }),
 });
 
-type TFormSchema = z.infer<typeof formSchema>;
+export type TFormSchema = z.infer<typeof formSchema>;
 
 export const Contact = () => {
   const {
@@ -27,8 +28,10 @@ export const Contact = () => {
     formState: { errors },
   } = useForm<TFormSchema>({ resolver: zodResolver(formSchema) });
 
-  const onSubmit = (values: TFormSchema) => {
-    console.log(values);
+  const onSubmit = async (values: TFormSchema) => {
+    const { error } = await sendEmail(values);
+
+    console.log(error);
 
     reset();
   };

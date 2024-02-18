@@ -4,6 +4,7 @@ import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
 import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/toaster';
 import { fonts } from '@/lib/fonts';
 import { siteConfig } from '@/lib/site-config';
 import { cn } from '@/lib/utils';
@@ -46,7 +47,10 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans', fonts)}>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <ThemeProvider attribute="class">
+          {children}
+          <Toaster position="bottom-left" />
+        </ThemeProvider>
       </body>
     </html>
   );

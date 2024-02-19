@@ -1,11 +1,17 @@
-import { Icons } from '@/components/icons';
+'use client';
+
+import { motion } from 'framer-motion';
+
 import { SectionHeading } from '@/components/section-heading';
 
 export const About = () => {
   return (
-    <section
+    <motion.section
       id="about"
       className="my-8 flex w-full scroll-mt-28 flex-col items-center sm:my-10"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}
     >
       <SectionHeading heading="About Me" />
       <div className="max-w-2xl text-center leading-7">
@@ -26,20 +32,6 @@ export const About = () => {
           how to play the guitar.
         </p>
       </div>
-      <div className="mt-8 flex w-full flex-wrap justify-center gap-10">
-        <Icons.html className="size-12" />
-        <Icons.css className="size-12" />
-        <Icons.sass className="size-12" />
-        <Icons.tailwind className="size-12" />
-        <Icons.javascript className="size-12" />
-        <Icons.typescript className="size-12" />
-        <Icons.react className="size-12" />
-        <Icons.redux className="size-12" />
-        <Icons.nextjs className="size-12" />
-        <Icons.nestjs className="size-12" />
-        <Icons.prisma className="size-12" />
-        <Icons.docker className="size-12" />
-      </div>
-    </section>
+    </motion.section>
   );
 };

@@ -3,6 +3,7 @@
 import 'react-vertical-timeline-component/style.min.css';
 
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -13,6 +14,8 @@ import { SectionHeading } from '@/components/section-heading';
 import { experiencesData } from '@/lib/data';
 
 export const Experience = () => {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
     <section id="experience" className="my-8 scroll-mt-28 sm:my-10">
       <SectionHeading
@@ -23,7 +26,7 @@ export const Experience = () => {
         {experiencesData.map(({ title, description, location, date }) => (
           <VerticalTimelineElement
             key={title}
-            visible
+            visible={inView}
             contentStyle={{
               background: 'hsl(var(--secondary))',
               boxShadow: 'none',
@@ -38,7 +41,9 @@ export const Experience = () => {
               border: '2px solid hsl(var(--foreground)',
             }}
           >
-            <h3 className="font-medium">{title}</h3>
+            <h3 ref={ref} className="font-medium">
+              {title}
+            </h3>
             <p className="!mt-0 !font-normal">{location}</p>
             <p className="text-muted-foreground !mt-1 !font-normal">
               {description}

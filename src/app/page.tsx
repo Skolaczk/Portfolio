@@ -5,6 +5,8 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Intro } from '@/components/intro';
 import { Projects } from '@/components/projects';
+import { SectionDivider } from '@/components/section-divider';
+import { Skills } from '@/components/skills';
 import { ThemeToggle } from '@/components/theme-toggle';
 
 const Home = () => {
@@ -13,8 +15,9 @@ const Home = () => {
       <div className="container flex flex-col items-center">
         <Header />
         <Intro />
-        <div className="bg-muted h-16 w-1 rounded-full sm:my-5" />
+        <SectionDivider />
         <About />
+        <Skills />
         <Projects />
         <Experience />
         <Contact />

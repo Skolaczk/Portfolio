@@ -2,6 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
@@ -42,7 +43,22 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="my-8 w-full scroll-mt-28 sm:my-10">
+    <motion.section
+      id="contact"
+      className="my-8 w-full scroll-mt-28 sm:my-10"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
       <SectionHeading
         heading="Get In Touch"
         content="Please contact me directly at skolakmichal1@gmail.com or through this form."
@@ -88,6 +104,6 @@ export const Contact = () => {
           Submit <Icons.arrowRight className="ml-2 size-4" />
         </Button>
       </form>
-    </section>
+    </motion.section>
   );
 };

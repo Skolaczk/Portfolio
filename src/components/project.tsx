@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import { Button } from '@/components/button';
@@ -6,11 +9,39 @@ import { projectsData } from '@/lib/data';
 
 type TProject = (typeof projectsData)[number];
 
-export const Project = (project: TProject) => {
+type TProps = {
+  project: TProject;
+  index: number;
+};
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+    },
+  }),
+};
+
+export const Project = ({ project, index }: TProps) => {
   const { image, title, description, technologies, links } = project;
 
   return (
-    <div className="bg-secondary rounded p-5">
+    <motion.div
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+      custom={index}
+      className="bg-secondary rounded p-5"
+    >
       <div className="bg-muted w-fit rounded-full p-4">
         <Image src={image} alt={`${title} image`} width={32} height={32} />
       </div>
@@ -33,6 +64,6 @@ export const Project = (project: TProject) => {
           <Icons.githubOutline className="size-5" />
         </a>
       </Button>
-    </div>
+    </motion.div>
   );
 };

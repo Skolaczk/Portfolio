@@ -25,58 +25,65 @@ export const links = [
 
 export const projectsData = [
   {
-    image: '/project-image.jpg',
-    title: 'Audiophile',
+    image: '/projects/socialhub.png',
+    title: 'SocialHub',
     description:
-      'Browser extension that records everything happening in application.',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind', 'Zod', 'Supabase'],
-    links: { preview: 'https://github.com/', github: 'https://github.com/' },
+      'Next-generation social media app, built with its own backend.',
+    technologies: ['Next.js', 'TypeScript', ' Nest.js', 'Tailwind', 'Prisma'],
+    links: {
+      preview: 'https://socialhub-ms.vercel.app/',
+      github: 'https://github.com/Skolaczk/SocialHub',
+    },
   },
   {
-    image: '/project-image.jpg',
-    title: 'Monito',
-    description:
-      'Browser extension that records everything happening in application.',
+    image: '/projects/nextstarter.png',
+    title: 'Next-starter',
+    description: 'Next.js starter template, packed with useful features.',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind',
+      'Shadcn/ui',
+      'Next-auth',
+      'Prisma',
+    ],
+    links: {
+      preview: 'https://next-starter-skolaczk.vercel.app',
+      github: 'https://github.com/Skolaczk/next-starter',
+    },
+  },
+  {
+    image: '/projects/audiophile.png',
+    title: 'Audiophile',
+    description: 'Online store specializing in headphones and speakers.',
     technologies: [
       'React',
       'Styled-components',
       'TypeScript',
-      'Yup',
+      'Stripe',
       'Firebase',
     ],
-    links: { preview: 'https://github.com/', github: 'https://github.com/' },
-  },
-  {
-    image: '/project-image.jpg',
-    title: 'SocialHub',
-    description:
-      'Browser extension that records everything happening in application.',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind', 'Zod', 'Supabase'],
-    links: { preview: 'https://github.com/', github: 'https://github.com/' },
+    links: {
+      preview: 'https://audiophile-ms.netlify.app/',
+      github: 'https://github.com/Skolaczk/Audiophile',
+    },
   },
 ] as const;
 
 export const experiencesData = [
   {
-    title: 'Graduated bootcamp',
-    location: 'Miami, FL',
+    title: 'Internship at WEB-BOX',
+    location: 'Tarnobrzeg, PL',
     description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
-    date: '2019',
+      'During this internship, I created Wordpress plugins and managed website content and settings.',
+    date: '2023',
   },
   {
-    title: 'Front-End Developer',
-    location: 'Orlando, FL',
+    title: 'Freelancing',
+    location: 'Remote',
     description:
-      'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
-    date: '2019 - 2021',
-  },
-  {
-    title: 'Full-Stack Developer',
-    location: 'Houston, TX',
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    date: '2021 - present',
+      "With a background in graphic design utilizing Figma and web development skills in Next.js with Sanity CMS integration, I bring a hands-on approach to problem-solving and a commitment to meeting clients' unique requirements.",
+    date: '2023 - present',
   },
 ] as const;
 

@@ -3,6 +3,7 @@ import '@/styles/globals.css';
 import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
+import { ActiveSectionProvider } from '@/components/active-section-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/toaster';
 import { fonts } from '@/lib/fonts';
@@ -26,21 +27,6 @@ export const metadata: Metadata = {
   verification: {
     google: siteConfig.googleSiteVerificationId,
   },
-  openGraph: {
-    url: siteConfig.url,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: siteConfig.title,
-    images: '/opengraph-image.png',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: '/opengraph-image.png',
-  },
 };
 
 const RootLayout = ({ children }: PropsWithChildren) => {
@@ -48,8 +34,10 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     <html lang="en" suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans', fonts)}>
         <ThemeProvider attribute="class">
-          {children}
-          <Toaster position="bottom-left" />
+          <ActiveSectionProvider>
+            {children}
+            <Toaster position="bottom-left" />
+          </ActiveSectionProvider>
         </ThemeProvider>
       </body>
     </html>

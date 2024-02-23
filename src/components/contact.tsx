@@ -10,6 +10,7 @@ import { sendEmail } from '@/actions/send-email';
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
+import { useSectionInView } from '@/hooks/use-section-in-view';
 import { cn } from '@/lib/utils';
 
 const formSchema = z.object({
@@ -23,6 +24,7 @@ const formSchema = z.object({
 export type TFormSchema = z.infer<typeof formSchema>;
 
 export const Contact = () => {
+  const { ref } = useSectionInView('Contact');
   const {
     register,
     handleSubmit,
@@ -44,8 +46,9 @@ export const Contact = () => {
 
   return (
     <motion.section
+      ref={ref}
       id="contact"
-      className="my-8 w-full scroll-mt-28 sm:my-10"
+      className="my-10 w-full scroll-mt-28"
       initial={{
         opacity: 0,
       }}

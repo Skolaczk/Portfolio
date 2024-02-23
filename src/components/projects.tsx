@@ -4,11 +4,14 @@ import { motion } from 'framer-motion';
 
 import { Project } from '@/components/project';
 import { SectionHeading } from '@/components/section-heading';
+import { useSectionInView } from '@/hooks/use-section-in-view';
 import { projectsData } from '@/lib/data';
 
 export const Projects = () => {
+  const { ref } = useSectionInView('Projects');
+
   return (
-    <section id="projects" className="my-8 scroll-mt-28 sm:my-10">
+    <section ref={ref} id="projects" className="my-10 scroll-mt-28">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{
@@ -24,7 +27,7 @@ export const Projects = () => {
       >
         <SectionHeading
           heading="My Projects"
-          content="Projects I worked on. Due to nature of internet businesses not all of them are still online."
+          content="Projects I worked on. Each of them containing its own case study."
         />
       </motion.div>
       <div className="flex flex-col gap-8 md:flex-row">

@@ -11,13 +11,15 @@ import {
 
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
+import { useSectionInView } from '@/hooks/use-section-in-view';
 import { experiencesData } from '@/lib/data';
 
 export const Experience = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref: sectionRef } = useSectionInView('Experience');
 
   return (
-    <section id="experience" className="my-10 scroll-mt-28">
+    <section ref={sectionRef} id="experience" className="my-10 scroll-mt-28">
       <SectionHeading
         heading="My Experience"
         content="Projects I worked on. Due to nature of internet businesses not all of them are still online."

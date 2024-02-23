@@ -3,10 +3,15 @@
 import { motion } from 'framer-motion';
 
 import { SectionHeading } from '@/components/section-heading';
+import { Skills } from '@/components/skills';
+import { useSectionInView } from '@/hooks/use-section-in-view';
 
 export const About = () => {
+  const { ref } = useSectionInView('About');
+
   return (
     <motion.section
+      ref={ref}
       id="about"
       className="my-10 flex w-full scroll-mt-28 flex-col items-center"
       initial={{ opacity: 0, y: 100 }}
@@ -32,6 +37,7 @@ export const About = () => {
           how to play the guitar.
         </p>
       </div>
+      <Skills />
     </motion.section>
   );
 };

@@ -23,7 +23,7 @@ export const Intro = () => {
           type: 'tween',
           duration: 0.2,
         }}
-        href="#"
+        href="https://github.com/Skolaczk/next-starter"
         className="bg-muted rounded px-3 py-1 text-sm font-medium"
       >
         🎉
@@ -34,7 +34,7 @@ export const Intro = () => {
         animate={{ opacity: 1, y: 0 }}
         className="text-3xl font-bold leading-tight tracking-tighter sm:text-4xl"
       >
-        Software developer with a passion for design
+        Front-end developer with a passion for design
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
@@ -42,11 +42,10 @@ export const Intro = () => {
         transition={{
           delay: 0.1,
         }}
-        className="text-muted-foreground max-w-2xl"
+        className="text-muted-foreground max-w-lg"
       >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-        aliquid commodi consequatur culpa, delectus dolore esse, eum laborum nam
-        nihil quaerat quas!
+        Hello, I&apos;m Michał. I am front-end developer from Poland. I enjoy
+        building sites and apps. My focus is React (Next.js).
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -57,7 +56,7 @@ export const Intro = () => {
         className="flex flex-row gap-2"
       >
         <Button asChild size="lg">
-          <Link href="#">
+          <Link href="#contact">
             Get in touch <Icons.arrowRight className="ml-2 size-4" />
           </Link>
         </Button>
@@ -72,12 +71,16 @@ export const Intro = () => {
           </a>
         </Button>
         <Button variant="secondary" size="icon" asChild>
-          <a href="/michalskolak.pdf" aria-label="Linkedin" download>
+          <a
+            href="https://www.linkedin.com/in/micha%C5%82-skolak-06905524b"
+            aria-label="Linkedin"
+            download
+          >
             <Icons.linkedin className="size-6" />
           </a>
         </Button>
         <Button variant="secondary" size="icon" asChild>
-          <a href="/michalskolak.pdf" aria-label="Github" download>
+          <a href="https://github.com/Skolaczk" aria-label="Github">
             <Icons.github className="size-6" />
           </a>
         </Button>

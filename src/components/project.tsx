@@ -40,7 +40,7 @@ export const Project = ({ project, index }: TProps) => {
         once: true,
       }}
       custom={index}
-      className="bg-secondary rounded p-5"
+      className="bg-secondary rounded p-5 md:w-1/3"
     >
       <div className="bg-muted w-fit rounded-full p-4">
         <Image src={image} alt={`${title} image`} width={32} height={32} />

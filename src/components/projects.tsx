@@ -8,7 +8,7 @@ import { projectsData } from '@/lib/data';
 
 export const Projects = () => {
   return (
-    <section id="projects" className="my-8 scroll-mt-28 sm:my-10">
+    <section id="projects" className="my-10 scroll-mt-28">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{

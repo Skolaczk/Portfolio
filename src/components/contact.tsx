@@ -45,7 +45,7 @@ export const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="my-8 w-full scroll-mt-28 sm:my-10"
+      className="my-10 w-full scroll-mt-28"
       initial={{
         opacity: 0,
       }}

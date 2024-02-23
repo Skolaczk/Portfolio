@@ -8,13 +8,13 @@ export const About = () => {
   return (
     <motion.section
       id="about"
-      className="my-8 flex w-full scroll-mt-28 flex-col items-center sm:my-10"
+      className="my-10 flex w-full scroll-mt-28 flex-col items-center"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
     >
       <SectionHeading heading="About Me" />
-      <div className="max-w-2xl text-center leading-7">
+      <div className="-mt-5 max-w-2xl text-center leading-7">
         <p className="mb-4">
           After graduating with a degree in Accounting, I decided to pursue my
           passion for programming. I enrolled in a coding bootcamp and learned

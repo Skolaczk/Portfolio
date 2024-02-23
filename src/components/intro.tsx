@@ -10,7 +10,7 @@ export const Intro = () => {
   return (
     <section
       id="home"
-      className="my-8 flex scroll-mt-96 flex-col items-center gap-4 text-center sm:my-10"
+      className="my-10 flex scroll-mt-96 flex-col items-center gap-4 text-center"
     >
       <motion.a
         initial={{ opacity: 0, scale: 0 }}
@@ -68,12 +68,12 @@ export const Intro = () => {
           </a>
         </Button>
         <Button variant="secondary" size="icon" asChild>
-          <a href="/michalskolak.pdf" download>
+          <a href="/michalskolak.pdf" aria-label="Linkedin" download>
             <Icons.linkedin className="size-6" />
           </a>
         </Button>
         <Button variant="secondary" size="icon" asChild>
-          <a href="/michalskolak.pdf" download>
+          <a href="/michalskolak.pdf" aria-label="Github" download>
             <Icons.github className="size-6" />
           </a>
         </Button>

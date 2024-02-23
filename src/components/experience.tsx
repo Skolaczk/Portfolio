@@ -17,7 +17,7 @@ export const Experience = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
-    <section id="experience" className="my-8 scroll-mt-28 sm:my-10">
+    <section id="experience" className="my-10 scroll-mt-28">
       <SectionHeading
         heading="My Experience"
         content="Projects I worked on. Due to nature of internet businesses not all of them are still online."

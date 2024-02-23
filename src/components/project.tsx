@@ -55,12 +55,12 @@ export const Project = ({ project, index }: TProps) => {
         ))}
       </div>
       <Button variant="outline" asChild className="mr-2 px-5">
-        <a href={links.preview}>
+        <a href={links.preview} aria-label="preview project">
           <Icons.preview className="size-5" />
         </a>
       </Button>
       <Button variant="outline" asChild className="px-5">
-        <a href={links.github}>
+        <a href={links.github} aria-label="github">
           <Icons.githubOutline className="size-5" />
         </a>
       </Button>

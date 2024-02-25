@@ -2,8 +2,8 @@
 
 import { Resend } from 'resend';
 
-import { TFormSchema } from '@/components/contact';
 import { env } from '@/env.mjs';
+import { TFormSchema } from '@/lib/form-schema';
 
 const resend = new Resend(env.RESEND_API_KEY);
 

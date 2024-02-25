@@ -4,24 +4,14 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
-import { z } from 'zod';
 
 import { sendEmail } from '@/actions/send-email';
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
 import { useSectionInView } from '@/hooks/use-section-in-view';
+import { formSchema, TFormSchema } from '@/lib/form-schema';
 import { cn } from '@/lib/utils';
-
-const formSchema = z.object({
-  email: z
-    .string()
-    .min(1, { message: 'Email is required' })
-    .email({ message: 'Must be a valid email' }),
-  message: z.string().min(1, { message: 'Message is required' }),
-});
-
-export type TFormSchema = z.infer<typeof formSchema>;
 
 export const Contact = () => {
   const { ref } = useSectionInView('Contact');
@@ -94,7 +84,7 @@ export const Contact = () => {
             {...register('message')}
             className={cn(
               'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-60 w-full resize-none rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
-              errors.email?.message && 'border-destructive'
+              errors.message?.message && 'border-destructive'
             )}
           ></textarea>
           {errors.message?.message && (

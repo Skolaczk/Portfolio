@@ -7,7 +7,11 @@ import { SectionHeading } from '@/components/section-heading';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 import { projectsData } from '@/lib/data';
 
-export const Projects = () => {
+type TProps = {
+  starsCount: number[];
+};
+
+export const Projects = ({ starsCount }: TProps) => {
   const { ref } = useSectionInView('Projects');
 
   return (
@@ -32,7 +36,12 @@ export const Projects = () => {
       </motion.div>
       <div className="flex flex-col gap-8 md:flex-row">
         {projectsData.map((project, index) => (
-          <Project key={project.title} project={project} index={index} />
+          <Project
+            key={project.title}
+            project={project}
+            index={index}
+            starsCount={starsCount}
+          />
         ))}
       </div>
     </section>

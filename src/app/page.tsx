@@ -7,8 +7,17 @@ import { Intro } from '@/components/intro';
 import { Projects } from '@/components/projects';
 import { SectionDivider } from '@/components/section-divider';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { projectsData } from '@/lib/data';
 
-const Home = () => {
+const Home = async () => {
+  const starsCount = await Promise.all(
+    projectsData.map(async ({ links }) => {
+      const res = await fetch(links.githubApi);
+      const data = await res.json();
+      return data.stargazers_count;
+    })
+  );
+
   return (
     <>
       <div className="container flex flex-col items-center">
@@ -16,7 +25,7 @@ const Home = () => {
         <Intro />
         <SectionDivider />
         <About />
-        <Projects />
+        <Projects starsCount={starsCount} />
         <Experience />
         <Contact />
         <Footer />

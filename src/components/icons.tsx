@@ -7,6 +7,7 @@ import {
   Github,
   LucideProps,
   Moon,
+  Star,
   Sun,
 } from 'lucide-react';
 
@@ -19,6 +20,7 @@ export const Icons = {
   githubOutline: Github,
   briefcase: Briefcase,
   chevronDown: ChevronDown,
+  star: Star,
   github: (props: LucideProps) => (
     <svg viewBox="0 0 24 24" {...props}>
       <path

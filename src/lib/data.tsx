@@ -33,6 +33,7 @@ export const projectsData = [
     links: {
       preview: 'https://socialhub-ms.vercel.app/',
       github: 'https://github.com/Skolaczk/SocialHub',
+      githubApi: 'https://api.github.com/repos/Skolaczk/SocialHub',
     },
   },
   {
@@ -50,6 +51,7 @@ export const projectsData = [
     links: {
       preview: 'https://next-starter-skolaczk.vercel.app',
       github: 'https://github.com/Skolaczk/next-starter',
+      githubApi: 'https://api.github.com/repos/Skolaczk/next-starter',
     },
   },
   {
@@ -66,6 +68,7 @@ export const projectsData = [
     links: {
       preview: 'https://audiophile-ms.netlify.app/',
       github: 'https://github.com/Skolaczk/Audiophile',
+      githubApi: 'https://api.github.com/repos/Skolaczk/Audiophile',
     },
   },
 ] as const;

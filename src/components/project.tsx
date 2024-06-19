@@ -12,6 +12,7 @@ type TProject = (typeof projectsData)[number];
 type TProps = {
   project: TProject;
   index: number;
+  starsCount: number[];
 };
 
 const fadeInAnimationVariants = {
@@ -28,7 +29,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export const Project = ({ project, index }: TProps) => {
+export const Project = ({ project, index, starsCount }: TProps) => {
   const { image, title, description, technologies, links } = project;
 
   return (
@@ -59,11 +60,19 @@ export const Project = ({ project, index }: TProps) => {
           <Icons.preview className="size-5" />
         </a>
       </Button>
-      <Button variant="outline" asChild className="px-5">
+      <Button variant="outline" asChild className="mr-2 px-5">
         <a href={links.github} aria-label="github">
           <Icons.githubOutline className="size-5" />
         </a>
       </Button>
+      {starsCount[index] > 100 && (
+        <Button asChild className="px-5">
+          <a href={links.github} aria-label="github">
+            <Icons.star className="mr-2 size-5" />
+            <span className="font-bold">{starsCount[index]}</span>
+          </a>
+        </Button>
+      )}
     </motion.div>
   );
 };

@@ -54,7 +54,23 @@ export const Contact = () => {
     >
       <SectionHeading
         heading="Get In Touch"
-        content="Please contact me directly at skolakmichal1@gmail.com or through this form."
+        content={
+          <>
+            Please contact me directly at{' '}
+            <Button
+              variant="link"
+              className="text-muted-foreground p-0 font-medium"
+            >
+              <a
+                className="underline-offset-4 hover:underline"
+                href="mailto:skolakmichal1@gmail.com"
+              >
+                skolakmichal1@gmail.com
+              </a>
+            </Button>{' '}
+            or through this form.
+          </>
+        }
       />
       <form
         onSubmit={handleSubmit(onSubmit)}

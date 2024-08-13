@@ -1,6 +1,8 @@
+import { ReactNode } from 'react';
+
 type TProps = {
   heading: string;
-  content?: string | undefined;
+  content?: string | ReactNode | undefined;
 };
 
 export const SectionHeading = ({ heading, content }: TProps) => {

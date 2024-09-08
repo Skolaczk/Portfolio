@@ -13,16 +13,16 @@ export const sendEmail = async ({ email, message }: TFormSchema) => {
       from: 'Contact Form <onboarding@resend.dev>',
       to: 'skolakmichal1@gmail.com',
       subject: 'Message from contact form',
-      reply_to: email,
+      replyTo: email,
       text: `email: ${email} \nmessage: ${message}`,
     });
 
     return {
       data: 'Email sent successfully!',
     };
-  } catch (error) {
+  } catch {
     return {
-      error: 'Something went wrong!',
+      error: `Something went wrong!`,
     };
   }
 };

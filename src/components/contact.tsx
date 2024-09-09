@@ -77,13 +77,22 @@ export const Contact = () => {
         className="flex flex-col items-center gap-5"
       >
         <div className="w-full max-w-xl">
+          <label
+            htmlFor="email"
+            className={cn(
+              'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+              errors.email?.message && 'text-destructive'
+            )}
+          >
+            Email
+          </label>
           <input
             type="email"
             id="email"
-            placeholder="Your email"
+            placeholder="hello@gmail.com"
             {...register('email')}
             className={cn(
-              'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+              'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-10 w-full rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
               errors.email?.message && 'border-destructive'
             )}
           />
@@ -94,12 +103,21 @@ export const Contact = () => {
           )}
         </div>
         <div className="w-full max-w-xl">
+          <label
+            htmlFor="message"
+            className={cn(
+              'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+              errors.message?.message && 'text-destructive'
+            )}
+          >
+            Message
+          </label>
           <textarea
             id="message"
-            placeholder="Your message"
+            placeholder="Hello! What's up?"
             {...register('message')}
             className={cn(
-              'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-60 w-full resize-none rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+              'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-60 w-full resize-none rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
               errors.message?.message && 'border-destructive'
             )}
           ></textarea>

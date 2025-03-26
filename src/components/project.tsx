@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
@@ -12,7 +11,7 @@ type TProject = (typeof projectsData)[number];
 type TProps = {
   project: TProject;
   index: number;
-  starsCount: number[];
+  starsCount: number;
 };
 
 const fadeInAnimationVariants = {
@@ -30,7 +29,7 @@ const fadeInAnimationVariants = {
 };
 
 export const Project = ({ project, index, starsCount }: TProps) => {
-  const { image, title, description, technologies, links } = project;
+  const { icon, title, description, technologies, links } = project;
 
   return (
     <motion.div
@@ -43,9 +42,7 @@ export const Project = ({ project, index, starsCount }: TProps) => {
       custom={index}
       className="bg-secondary flex flex-col items-center rounded p-5 text-center md:w-1/3"
     >
-      <div className="bg-muted w-fit rounded-full p-4">
-        <Image src={image} alt={`${title} image`} width={32} height={32} />
-      </div>
+      <div className="bg-muted w-fit rounded-full p-4">{icon}</div>
       <h3 className="my-2 text-lg font-medium">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
       <div className="my-3 flex flex-wrap justify-center gap-2">
@@ -66,11 +63,11 @@ export const Project = ({ project, index, starsCount }: TProps) => {
             <Icons.githubOutline className="size-5" />
           </a>
         </Button>
-        {starsCount[index] > 100 && (
+        {starsCount > 100 && (
           <Button asChild className="px-5">
             <a href={links.github} aria-label="github">
               <Icons.star className="mr-2 size-5" />
-              <span className="font-bold">{starsCount[index]}</span>
+              <span className="font-bold">{starsCount}</span>
             </a>
           </Button>
         )}

@@ -8,10 +8,10 @@ import { useSectionInView } from '@/hooks/use-section-in-view';
 import { projectsData } from '@/lib/data';
 
 type TProps = {
-  starsCount: number[];
+  projectsStarsCount: number[];
 };
 
-export const Projects = ({ starsCount }: TProps) => {
+export const Projects = ({ projectsStarsCount }: TProps) => {
   const { ref } = useSectionInView('Projects');
 
   return (
@@ -40,7 +40,7 @@ export const Projects = ({ starsCount }: TProps) => {
             key={project.title}
             project={project}
             index={index}
-            starsCount={starsCount}
+            starsCount={projectsStarsCount[index]}
           />
         ))}
       </div>

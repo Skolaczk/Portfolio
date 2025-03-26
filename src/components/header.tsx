@@ -18,7 +18,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { links } from '@/lib/data';
 
 export const Header = () => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSection();
 
@@ -28,7 +28,7 @@ export const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       className="sm:bg-secondary/80 sticky top-5 z-20 my-5 flex items-center gap-2 sm:top-10 sm:my-10 sm:rounded-full sm:px-2 sm:py-3 sm:backdrop-blur-sm"
     >
-      <Dialog open={open} onOpenChange={setOpen}>
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
           <Button variant="secondary" size="lg" className="sm:hidden">
             Menu <Icons.chevronDown className="ml-2 size-4" />
@@ -44,7 +44,7 @@ export const Header = () => {
             <ul>
               {links.map(({ name, hash }) => (
                 <li
-                  onClick={() => setOpen(false)}
+                  onClick={() => setIsOpen(false)}
                   key={name}
                   className="border-muted-foreground/10 py-3 text-sm [&:not(:last-child)]:border-b"
                 >

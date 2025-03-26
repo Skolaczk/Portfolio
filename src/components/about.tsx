@@ -29,8 +29,8 @@ export const About = () => {
           the opportunity to work on several exciting projects during my
           learning journey, ranging from personal projects to collaborative
           ventures. My core stack is React, Next.js, TypeScript, and Tailwind
-          CSS. I am also familiar with Nest.js and Prisma. I am always looking
-          to learn new technologies.
+          CSS. I am also familiar with Nest.js and Prisma. I&apos;m always
+          looking to learn new technologies.
         </p>
         <p>
           I&apos;m open to Job opportunities where I can contribute, learn and

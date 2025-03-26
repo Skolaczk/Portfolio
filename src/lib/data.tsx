@@ -25,7 +25,7 @@ export const links = [
 
 export const projectsData = [
   {
-    image: '/projects/socialhub.svg',
+    icon: <Icons.socialhub width={32} height={32} />,
     title: 'SocialHub',
     description:
       'Next-generation social media app, built with its own backend.',
@@ -37,7 +37,7 @@ export const projectsData = [
     },
   },
   {
-    image: '/projects/nextstarter.svg',
+    icon: <Icons.nextstarter width={32} height={32} />,
     title: 'Next-starter',
     description: 'Next.js starter template, packed with useful features.',
     technologies: [
@@ -55,7 +55,7 @@ export const projectsData = [
     },
   },
   {
-    image: '/projects/audiophile.svg',
+    icon: <Icons.audiophile width={32} height={32} />,
     title: 'Audiophile',
     description: 'Online store specializing in headphones and speakers.',
     technologies: [

@@ -14,27 +14,33 @@ export const Intro = () => {
     <section
       ref={ref}
       id="home"
-      className="my-10 flex scroll-mt-96 flex-col items-center gap-4 text-center sm:mt-20"
+      className="my-10 flex scroll-mt-96 flex-col items-center gap-5 text-center sm:mt-28"
     >
-      <motion.a
+      <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
           type: 'tween',
           duration: 0.2,
         }}
-        href="https://github.com/Skolaczk/next-starter"
-        className="bg-muted rounded px-3 py-1 text-sm font-medium"
+        className="flex items-center gap-3 rounded border px-3 py-1"
       >
-        🎉
-        <span className="ml-3">Check out my new project</span>
-      </motion.a>
+        <span className="relative flex size-2">
+          <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+          <span className="relative flex size-2 rounded-full bg-green-400"></span>
+        </span>
+        <span className="font-mono text-sm">Available for work!</span>
+      </motion.div>
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-3xl font-bold leading-tight tracking-tighter sm:text-4xl"
+        className="font-heading max-w-3xl text-3xl font-extrabold sm:text-4xl md:text-5xl"
       >
-        Front-end developer with a passion for design
+        Hi I&#39;m a{' '}
+        <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
+          Full Stack
+        </span>{' '}
+        developer creating modern web apps.
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
@@ -42,10 +48,10 @@ export const Intro = () => {
         transition={{
           delay: 0.1,
         }}
-        className="text-muted-foreground max-w-lg"
+        className="text-muted-foreground max-w-xl"
       >
-        Hello, I&apos;m Michał. I am front-end developer from Poland. I enjoy
-        building sites and apps. My focus is React (Next.js).
+        A full stack developer based in the Poland. I&#39;m passionate about
+        building modern web applications using Next.js, React, and Tailwind CSS.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -60,29 +66,28 @@ export const Intro = () => {
             Get in touch <Icons.arrowRight className="ml-2 size-4" />
           </Link>
         </Button>
-        <Button
-          variant="secondary"
-          size="lg"
-          className="hidden sm:flex"
-          asChild
-        >
+        <Button variant="outline" size="lg" className="hidden sm:flex" asChild>
           <a href="/michalskolak.pdf" download>
             Download CV <Icons.download className="ml-2 size-4" />
           </a>
         </Button>
-        <Button variant="secondary" size="icon" asChild>
-          <a
+        <Button variant="outline" size="icon" asChild>
+          <Link
             href="https://www.linkedin.com/in/micha%C5%82-skolak-06905524b"
             aria-label="Linkedin"
-            download
+            target="_blank"
           >
-            <Icons.linkedin className="size-6" />
-          </a>
+            <Icons.linkedin className="size-5" />
+          </Link>
         </Button>
-        <Button variant="secondary" size="icon" asChild>
-          <a href="https://github.com/Skolaczk" aria-label="Github">
-            <Icons.github className="size-6" />
-          </a>
+        <Button variant="outline" size="icon" asChild>
+          <Link
+            href="https://github.com/Skolaczk"
+            aria-label="Github"
+            target="_blank"
+          >
+            <Icons.github className="size-5" />
+          </Link>
         </Button>
       </motion.div>
     </section>

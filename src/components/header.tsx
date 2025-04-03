@@ -26,11 +26,11 @@ export const Header = () => {
     <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="sm:bg-secondary/80 sticky top-5 z-20 my-5 flex items-center gap-2 sm:top-10 sm:my-10 sm:rounded-full sm:px-2 sm:py-3 sm:backdrop-blur-sm"
+      className="bg-background/80 sticky top-5 z-20 my-5 flex items-center gap-2 sm:top-10 sm:my-10 sm:rounded-full sm:border sm:px-2 sm:py-3 sm:backdrop-blur-sm"
     >
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
-          <Button variant="secondary" size="lg" className="sm:hidden">
+          <Button variant="outline" size="lg" className="sm:hidden">
             Menu <Icons.chevronDown className="ml-2 size-4" />
           </Button>
         </DialogTrigger>

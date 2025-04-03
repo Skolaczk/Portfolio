@@ -11,7 +11,7 @@ export const ThemeToggle = ({ className }: ButtonProps) => {
   return (
     <Button
       className={className}
-      variant="secondary"
+      variant="outline"
       size="icon"
       aria-label="theme toggle"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}

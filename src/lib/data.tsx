@@ -10,12 +10,12 @@ export const links = [
     hash: '#about',
   },
   {
-    name: 'Projects',
-    hash: '#projects',
-  },
-  {
     name: 'Experience',
     hash: '#experience',
+  },
+  {
+    name: 'Projects',
+    hash: '#projects',
   },
   {
     name: 'Contact',
@@ -25,10 +25,10 @@ export const links = [
 
 export const projectsData = [
   {
-    icon: <Icons.socialhub width={32} height={32} />,
+    image: '/images/project-1.jpg',
     title: 'SocialHub',
     description:
-      'Next-generation social media app, built with its own backend.',
+      "Are you looking for inspiration for your portfolio? You're in the right place! Here you will find a collection of amazing portfolios.",
     technologies: ['Next.js', 'TypeScript', ' Nest.js', 'Tailwind', 'Prisma'],
     links: {
       preview: 'https://socialhub-ms.vercel.app/',
@@ -37,38 +37,15 @@ export const projectsData = [
     },
   },
   {
-    icon: <Icons.nextstarter width={32} height={32} />,
+    image: '/images/project-2.jpg',
     title: 'Next-starter',
-    description: 'Next.js starter template, packed with useful features.',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'Tailwind',
-      'Shadcn/ui',
-      'Next-auth',
-      'Prisma',
-    ],
+    description:
+      'Create your resume in a few minutes. The tool will help you with the content and design.',
+    technologies: ['Next.js', 'Tailwind', 'Shadcn/ui', 'Next-auth', 'Prisma'],
     links: {
       preview: 'https://next-starter-skolaczk.vercel.app',
       github: 'https://github.com/Skolaczk/next-starter',
       githubApi: 'https://api.github.com/repos/Skolaczk/next-starter',
-    },
-  },
-  {
-    icon: <Icons.audiophile width={32} height={32} />,
-    title: 'Audiophile',
-    description: 'Online store specializing in headphones and speakers.',
-    technologies: [
-      'React',
-      'Styled-components',
-      'TypeScript',
-      'Stripe',
-      'Firebase',
-    ],
-    links: {
-      preview: 'https://audiophile-ms.netlify.app/',
-      github: 'https://github.com/Skolaczk/Audiophile',
-      githubApi: 'https://api.github.com/repos/Skolaczk/Audiophile',
     },
   },
 ] as const;

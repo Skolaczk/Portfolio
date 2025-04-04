@@ -19,8 +19,8 @@ const HomePage = async () => {
         <Intro />
         <SectionDivider />
         <About />
-        <Projects projectsStarsCount={projectsStarsCount} />
         <Experience />
+        <Projects projectsStarsCount={projectsStarsCount} />
         <Contact />
         <Footer />
       </div>

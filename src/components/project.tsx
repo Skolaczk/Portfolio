@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Button } from '@/components/button';
-import { Icons } from '@/components/icons';
 import { projectsData } from '@/lib/data';
 
 type TProject = (typeof projectsData)[number];
@@ -28,8 +28,8 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export const Project = ({ project, index, starsCount }: TProps) => {
-  const { icon, title, description, technologies, links } = project;
+export const Project = ({ project, index }: TProps) => {
+  const { image, title, description, technologies, links } = project;
 
   return (
     <motion.div
@@ -40,37 +40,30 @@ export const Project = ({ project, index, starsCount }: TProps) => {
         once: true,
       }}
       custom={index}
-      className="bg-secondary flex flex-col items-center rounded p-5 text-center md:w-1/3"
+      className="flex flex-col rounded border p-5 md:w-1/2"
     >
-      <div className="bg-muted w-fit rounded-full p-4">{icon}</div>
-      <h3 className="my-2 text-lg font-medium">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-      <div className="my-3 flex flex-wrap justify-center gap-2">
+      <Link
+        href={links.github}
+        aria-label={title}
+        target="_blank"
+        className="overflow-hidden rounded"
+      >
+        <Image
+          src={image}
+          alt={title}
+          height={390}
+          width={600}
+          className="rounded transition-transform hover:scale-105"
+        />
+      </Link>
+      <h3 className="mt-3 text-xl font-medium">{title}</h3>
+      <p className="text-muted-foreground mb-2 mt-1">{description}</p>
+      <div className="flex flex-wrap gap-2">
         {technologies.map((tech) => (
-          <span className="bg-muted rounded-full px-3 py-1 text-sm" key={tech}>
+          <span className="rounded-full border px-3 py-1 text-sm" key={tech}>
             {tech}
           </span>
         ))}
-      </div>
-      <div className="mt-2 flex">
-        <Button variant="outline" asChild className="mr-2 px-5">
-          <a href={links.preview} aria-label="preview project">
-            <Icons.preview className="size-5" />
-          </a>
-        </Button>
-        <Button variant="outline" asChild className="mr-2 px-5">
-          <a href={links.github} aria-label="github">
-            <Icons.githubOutline className="size-5" />
-          </a>
-        </Button>
-        {starsCount > 100 && (
-          <Button asChild className="px-5">
-            <a href={links.github} aria-label="github">
-              <Icons.star className="mr-2 size-5" />
-              <span className="font-bold">{starsCount}</span>
-            </a>
-          </Button>
-        )}
       </div>
     </motion.div>
   );

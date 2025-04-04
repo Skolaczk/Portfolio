@@ -34,7 +34,7 @@ export const Projects = ({ projectsStarsCount }: TProps) => {
           content="Projects I worked on. Each of them containing its own case study."
         />
       </motion.div>
-      <div className="flex flex-col gap-8 md:flex-row">
+      <div className="flex flex-col gap-7 md:flex-row">
         {projectsData.map((project, index) => (
           <Project
             key={project.title}

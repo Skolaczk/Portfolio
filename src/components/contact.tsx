@@ -3,6 +3,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { toast } from 'sonner';
 
 import { sendEmailAction } from '@/actions/send-email';
@@ -38,7 +39,7 @@ export const Contact = () => {
     <motion.section
       ref={ref}
       id="contact"
-      className="my-10 w-full scroll-mt-28"
+      className="my-10 w-full scroll-mt-28 md:mb-20"
       initial={{
         opacity: 0,
       }}
@@ -59,14 +60,12 @@ export const Contact = () => {
             Please contact me directly at{' '}
             <Button
               variant="link"
-              className="text-muted-foreground p-0 font-medium"
+              className="text-muted-foreground hover:text-foreground h-fit p-0 font-medium underline transition-colors"
+              asChild
             >
-              <a
-                className="underline-offset-4 hover:underline"
-                href="mailto:skolakmichal1@gmail.com"
-              >
+              <Link href="mailto:skolakmichal1@gmail.com">
                 skolakmichal1@gmail.com
-              </a>
+              </Link>
             </Button>{' '}
             or through this form.
           </>

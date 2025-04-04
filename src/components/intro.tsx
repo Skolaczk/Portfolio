@@ -34,7 +34,7 @@ export const Intro = () => {
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        className="font-heading max-w-3xl text-3xl font-extrabold sm:text-4xl md:text-5xl"
+        className="font-heading max-w-3xl text-4xl font-extrabold md:text-5xl"
       >
         Hi I&#39;m a{' '}
         <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">

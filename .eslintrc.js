@@ -19,6 +19,7 @@ module.exports = {
     'sort-imports': 'off',
     'tailwindcss/no-custom-classname': 'off',
     '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-require-imports': 'off',
     'simple-import-sort/imports': [
       2,
       {

@@ -19,7 +19,11 @@ export const Experience = () => {
   const { ref: sectionRef } = useSectionInView('Experience');
 
   return (
-    <section ref={sectionRef} id="experience" className="my-10 scroll-mt-28">
+    <section
+      ref={sectionRef}
+      id="experience"
+      className="my-10 scroll-mt-28 md:mb-20"
+    >
       <SectionHeading
         heading="My Experience"
         content="Professional experience that I have accumulated over several years."

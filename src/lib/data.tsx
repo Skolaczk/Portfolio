@@ -80,6 +80,7 @@ export const experiencesData = [
     description:
       'During this internship, I focused on two key areas: creating Wordpress plugins and managing website content, plugins, and settings.',
     date: '2023',
+    technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'MongoDB'],
   },
   {
     title: 'Internship at Chop-Chop',
@@ -87,6 +88,7 @@ export const experiencesData = [
     description:
       'During my internship at Chop-Chop, I collaborated with an experienced IT team, focusing on tasks in Next.js. This experience provided valuable insights into teamwork and advanced my proficiency in Next.js.',
     date: '2024',
+    technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'MongoDB'],
   },
   {
     title: 'Freelancing',
@@ -94,6 +96,7 @@ export const experiencesData = [
     description:
       'As a freelancer, I specialized in graphic design using Figma and website development using Next.js with Sanity CMS. I undertook projects independently, from design conceptualization to final implementation, ensuring client satisfaction.',
     date: '2023 - present',
+    technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'MongoDB'],
   },
 ] as const;
 

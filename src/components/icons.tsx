@@ -1,6 +1,8 @@
 import {
   ArrowRight,
   Briefcase,
+  Building2,
+  Calendar,
   ChevronDown,
   Download,
   ExternalLink,
@@ -22,6 +24,8 @@ export const Icons = {
   briefcase: Briefcase,
   chevronDown: ChevronDown,
   star: Star,
+  calendar: Calendar,
+  building: Building2,
   audiophile: (props: LucideProps) => (
     <svg
       width="64"

@@ -11,7 +11,6 @@ type TProject = (typeof projectsData)[number];
 type TProps = {
   project: TProject;
   index: number;
-  starsCount: number;
 };
 
 const fadeInAnimationVariants = {

@@ -23,13 +23,17 @@ export const Intro = () => {
           type: 'tween',
           duration: 0.2,
         }}
-        className="flex items-center gap-3 rounded border px-3 py-1"
       >
-        <span className="relative flex size-2">
-          <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-          <span className="relative flex size-2 rounded-full bg-green-400"></span>
-        </span>
-        <span className="font-mono text-sm">Available for work!</span>
+        <Link
+          href="#contact"
+          className="flex items-center gap-3 rounded border px-3 py-1"
+        >
+          <span className="relative flex size-2">
+            <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative flex size-2 rounded-full bg-green-400"></span>
+          </span>
+          <span className="font-mono text-sm">Available for work!</span>
+        </Link>
       </motion.div>
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
@@ -38,7 +42,7 @@ export const Intro = () => {
       >
         Hi I&#39;m a{' '}
         <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
-          Full Stack
+          Frontend
         </span>{' '}
         developer creating modern web apps.
       </motion.h1>
@@ -50,7 +54,7 @@ export const Intro = () => {
         }}
         className="text-muted-foreground max-w-xl"
       >
-        A full stack developer based in the Poland. I&#39;m passionate about
+        A frontend developer based in the Poland. I&#39;m passionate about
         building modern web applications using Next.js, React, and Tailwind CSS.
       </motion.p>
       <motion.div

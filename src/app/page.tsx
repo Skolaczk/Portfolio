@@ -7,11 +7,8 @@ import { Intro } from '@/components/intro';
 import { Projects } from '@/components/projects';
 import { SectionDivider } from '@/components/section-divider';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { getProjectsStarsCount } from '@/services/get-projects-stars-count';
 
 const HomePage = async () => {
-  const projectsStarsCount = await getProjectsStarsCount();
-
   return (
     <>
       <div className="container flex flex-col items-center">
@@ -20,7 +17,7 @@ const HomePage = async () => {
         <SectionDivider />
         <About />
         <Experience />
-        <Projects projectsStarsCount={projectsStarsCount} />
+        <Projects />
         <Contact />
         <Footer />
       </div>

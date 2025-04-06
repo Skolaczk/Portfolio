@@ -24,9 +24,9 @@ export const Experience = () => {
       />
       <div className="relative max-w-screen-md">
         {experiencesData.map(
-          ({ title, description, location, date, technologies }) => (
+          ({ title, description, company, period, technologies }) => (
             <div
-              key={title}
+              key={company}
               className="not-last:pb-12 relative pl-8 [&:not(:last-child)]:pb-10"
             >
               <div className="bg-muted absolute left-0 top-2.5 h-full w-[2px] group-first:top-6 group-first:h-[calc(100%-24px)]">
@@ -50,13 +50,13 @@ export const Experience = () => {
                   <div className="flex size-9 shrink-0 items-center justify-center rounded-full border">
                     <Icons.building className="size-5" />
                   </div>
-                  <span className="text-lg font-semibold">{location}</span>
+                  <span className="text-lg font-semibold">{company}</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-medium">{title}</h3>
                   <div className="mt-1 flex items-center gap-2 text-sm">
                     <Icons.calendar className="size-4" />
-                    <span>{date}</span>
+                    <span>{period}</span>
                   </div>
                 </div>
                 <p className="text-muted-foreground">{description}</p>

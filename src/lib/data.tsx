@@ -26,18 +26,6 @@ export const links = [
 export const projectsData = [
   {
     image: '/images/project-2.webp',
-    title: 'SocialHub',
-    description:
-      'SocialHub is a next-generation social media app developed using Next.js and Nest.js.',
-    technologies: ['Next.js', 'TypeScript', ' Nest.js', 'Tailwind', 'Prisma'],
-    links: {
-      preview: 'https://socialhub-ms.vercel.app/',
-      github: 'https://github.com/Skolaczk/SocialHub',
-      githubApi: 'https://api.github.com/repos/Skolaczk/SocialHub',
-    },
-  },
-  {
-    image: '/images/project-1.webp',
     title: 'Next-starter',
     description:
       'A Next.js starter template, packed with features like TypeScript, Tailwind CSS, Next-auth, Eslint, Stripe, testing tools and more.',
@@ -46,6 +34,18 @@ export const projectsData = [
       preview: 'https://next-starter-skolaczk.vercel.app',
       github: 'https://github.com/Skolaczk/next-starter',
       githubApi: 'https://api.github.com/repos/Skolaczk/next-starter',
+    },
+  },
+  {
+    image: '/images/project-1.webp',
+    title: 'SocialHub',
+    description:
+      'SocialHub is a next-generation social media app developed using Next.js and Nest.js.',
+    technologies: ['Next.js', 'TypeScript', ' Nest.js', 'Tailwind', 'Prisma'],
+    links: {
+      preview: 'https://socialhub-ms.vercel.app/',
+      github: 'https://github.com/Skolaczk/SocialHub',
+      githubApi: 'https://api.github.com/repos/Skolaczk/SocialHub',
     },
   },
 ] as const;

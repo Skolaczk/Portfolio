@@ -13,7 +13,7 @@ $ npm install
 ```
 Then create .env file:
 ```bash
-SITE_URL='https://example.com' ## Required to generate sitemap by next-sitemap 
+SITE_URL='https://example.com' ## Required to generate sitemap.xml and robots.txt
 RESEND_API_KEY='your_resend_api_key' ## Required to send email by resend
 ```
 

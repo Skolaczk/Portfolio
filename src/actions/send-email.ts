@@ -3,7 +3,7 @@
 import { Resend } from 'resend';
 
 import { env } from '@/env.mjs';
-import { TFormSchema } from '@/lib/form-schema';
+import type { TFormSchema } from '@/lib/form-schema';
 
 const resend = new Resend(env.RESEND_API_KEY);
 

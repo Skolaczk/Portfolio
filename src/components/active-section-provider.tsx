@@ -1,8 +1,9 @@
 'use client';
 
-import React, {
+import type React from 'react';
+import {
   createContext,
-  PropsWithChildren,
+  type PropsWithChildren,
   useContext,
   useState,
 } from 'react';

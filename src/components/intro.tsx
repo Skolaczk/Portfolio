@@ -26,7 +26,7 @@ export const Intro = () => {
       >
         <Link
           href="#contact"
-          className="flex items-center gap-3 rounded border px-3 py-1"
+          className="flex items-center gap-3 rounded-sm border px-3 py-1"
         >
           <span className="relative flex size-2">
             <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
@@ -38,10 +38,10 @@ export const Intro = () => {
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        className="font-heading max-w-3xl text-4xl font-extrabold md:text-5xl"
+        className="max-w-3xl font-extrabold font-heading text-4xl md:text-5xl"
       >
         Hi I&#39;m a{' '}
-        <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
           Frontend
         </span>{' '}
         developer creating modern web apps.
@@ -52,7 +52,7 @@ export const Intro = () => {
         transition={{
           delay: 0.1,
         }}
-        className="text-muted-foreground max-w-xl"
+        className="max-w-xl text-muted-foreground"
       >
         A frontend developer based in the Poland. I&#39;m passionate about
         building modern web applications using Next.js, React, and Tailwind CSS.

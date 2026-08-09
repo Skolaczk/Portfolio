@@ -11,7 +11,7 @@ import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
 import { useSectionInView } from '@/hooks/use-section-in-view';
-import { formSchema, TFormSchema } from '@/lib/form-schema';
+import { formSchema, type TFormSchema } from '@/lib/form-schema';
 import { cn } from '@/lib/utils';
 
 export const Contact = () => {
@@ -60,7 +60,7 @@ export const Contact = () => {
             Please contact me directly at{' '}
             <Button
               variant="link"
-              className="text-muted-foreground hover:text-foreground h-fit p-0 font-medium underline transition-colors"
+              className="h-fit p-0 font-medium text-muted-foreground underline transition-colors hover:text-foreground"
               asChild
             >
               <Link href="mailto:skolakmichal1@gmail.com">
@@ -79,7 +79,7 @@ export const Contact = () => {
           <label
             htmlFor="email"
             className={cn(
-              'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+              'font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
               errors.email?.message && 'text-destructive'
             )}
           >
@@ -91,12 +91,12 @@ export const Contact = () => {
             placeholder="hello@gmail.com"
             {...register('email')}
             className={cn(
-              'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-10 w-full rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+              'mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
               errors.email?.message && 'border-destructive'
             )}
           />
           {errors.email?.message && (
-            <p className="text-destructive mt-1 text-sm">
+            <p className="mt-1 text-destructive text-sm">
               {errors.email?.message}
             </p>
           )}
@@ -105,7 +105,7 @@ export const Contact = () => {
           <label
             htmlFor="message"
             className={cn(
-              'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+              'font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
               errors.message?.message && 'text-destructive'
             )}
           >
@@ -116,12 +116,12 @@ export const Contact = () => {
             placeholder="Hello! What's up?"
             {...register('message')}
             className={cn(
-              'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-60 w-full resize-none rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+              'mt-2 flex h-60 w-full resize-none rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
               errors.message?.message && 'border-destructive'
             )}
           ></textarea>
           {errors.message?.message && (
-            <p className="text-destructive mt-1 text-sm">
+            <p className="mt-1 text-destructive text-sm">
               {errors.message?.message}
             </p>
           )}

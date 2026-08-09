@@ -1,3 +1,3 @@
-import { links } from '@/lib/data';
+import type { links } from '@/lib/data';
 
 export type SectionName = (typeof links)[number]['name'];

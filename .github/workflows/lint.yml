@@ -7,15 +7,13 @@ on:
 
 jobs:
   lint:
-    name: Eslint, Typescript, prettier
+    name: Biome, Typescript
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: npm install
-      - name: ESLint
+      - name: Biome
         run: npm run lint
       - name: Type check
         run: npm run typecheck
-      - name: Prettier
-        run: npm run format:check

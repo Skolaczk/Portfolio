@@ -40,48 +40,20 @@ export const projectsData = [
       githubApi: 'https://api.github.com/repos/Skolaczk/next-starter',
     },
   },
-  {
-    image: '/images/project-1.webp',
-    title: 'SocialHub',
-    description:
-      'SocialHub is a next-generation social media app developed using Next.js and Nest.js.',
-    technologies: ['Next.js', 'TypeScript', ' Nest.js', 'Tailwind', 'Prisma'],
-    links: {
-      preview: 'https://socialhub-ms.vercel.app/',
-      github: 'https://github.com/Skolaczk/SocialHub',
-      githubApi: 'https://api.github.com/repos/Skolaczk/SocialHub',
-    },
-  },
 ] as const;
 
 export const experiencesData = [
   {
-    title: 'Web developer intern',
-    company: 'WEB-BOX, Tarnobrzeg PL',
-    description:
-      'During this internship, I focused on two key areas: creating Wordpress plugins and managing website content, plugins, and settings.',
-    period: '2023',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Wordpress'],
-  },
-  {
     title: 'Frontend developer & UI designer',
-    company: 'Freelancing, remote',
+    company: 'Freelancing',
     description:
-      'As a freelancer, I specialized in graphic design using Figma and website development using Next.js with Sanity CMS. I undertook projects independently, from design conceptualization to final implementation, ensuring client satisfaction.',
+      'As a freelancer, I specialized in graphic design and website development using modern technologies. I undertook projects independently, from design conceptualization to final implementation, ensuring client satisfaction.',
     period: '2023 - 2024',
     technologies: ['Next.js', 'TypeScript', 'Sanity CMS', 'Tailwind'],
   },
   {
-    title: 'Frontend developer intern',
-    company: 'Chop-chop, remote',
-    description:
-      'During my internship at Chop-Chop, I collaborated with an experienced IT team, focusing on tasks in Next.js. This experience provided valuable insights into teamwork and advanced my proficiency in Next.js.',
-    period: '2024',
-    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
-  },
-  {
     title: 'Frontend developer & UI designer',
-    company: 'GeoScan, remote',
+    company: 'GeoScan',
     description: (
       <>
         At GeoScan, I collaborate with frontend, backend, and GIS specialists to
@@ -97,12 +69,20 @@ export const experiencesData = [
           geoscan-app.com
         </Link>{' '}
         — a platform for generating real estate reports. I’m responsible for
-        developing and maintaining the frontend, as well as designing UI/UX to
-        ensure a clear and intuitive user experience.
+        developing and maintaining the frontend with modern technologies, as
+        well as designing UI/UX to ensure a clear and intuitive user experience.
       </>
     ),
-    period: '2024 - present',
+    period: '2024 - 2025',
     technologies: ['Next.js', 'TypeScript', 'Tailwind', 'Supabase', 'Leaflet'],
+  },
+  {
+    title: 'Frontend developer',
+    company: 'Webalize',
+    description:
+      'At Webalize, a software house, I work on client web projects as a frontend developer. I build and maintain applications with modern technologies, collaborating with designers and backend developers to deliver production-ready solutions.',
+    period: '2025 - present',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind', 'Shopware', 'Payload'],
   },
 ] as const;
 

@@ -55,7 +55,7 @@ export const Intro = () => {
         className="max-w-xl text-muted-foreground"
       >
         A frontend developer based in the Poland. I&#39;m passionate about
-        building modern web applications using Next.js, React, and Tailwind CSS.
+        building modern web applications
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -69,11 +69,6 @@ export const Intro = () => {
           <Link href="#contact">
             Get in touch <Icons.arrowRight className="ml-2 size-4" />
           </Link>
-        </Button>
-        <Button variant="outline" size="lg" className="hidden sm:flex" asChild>
-          <a href="/michalskolak.pdf" download>
-            Download CV <Icons.download className="ml-2 size-4" />
-          </a>
         </Button>
         <Button variant="outline" size="icon" asChild>
           <Link

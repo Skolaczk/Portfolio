@@ -33,7 +33,7 @@ export const projectsData = [
     title: 'Next-starter',
     description:
       'A Next.js starter template, packed with features like TypeScript, Tailwind CSS, Next-auth, Eslint, Stripe, testing tools and more.',
-    technologies: ['Next.js', 'Tailwind', 'Shadcn/ui', 'Next-auth', 'Prisma'],
+    technologies: ['Next.js', 'Tailwind', 'Shadcn/ui', 'Next-auth', 'Drizzle'],
     links: {
       preview: 'https://next-starter-skolaczk.vercel.app',
       github: 'https://github.com/Skolaczk/next-starter',
